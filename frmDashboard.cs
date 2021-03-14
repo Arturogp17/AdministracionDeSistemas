@@ -1,4 +1,5 @@
 ﻿using ProyectoABD.Properties;
+using ProyectoABD.Views.Camion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,15 +21,15 @@ namespace ProyectpABD
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            //pnlContainer.Controls.Clear();  //Limpia el contenedo
-            //frmCustomer fDashboard = new frmCustomer(); //Crea la nueva forma a asignar
-            //fDashboard.Name = "frmAdmin";
-            //fDashboard.TopLevel = false;
-            //fDashboard.AutoScroll = true;
-            //pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
-            //fDashboard.FormBorderStyle = FormBorderStyle.None;
-            //fDashboard.Dock = DockStyle.Fill;
-            //fDashboard.Show();
+            pnlContainer.Controls.Clear();  //Limpia el contenedo
+            Camion fDashboard = new Camion(); //Crea la nueva forma a asignar
+            fDashboard.Name = "frmAdmin";
+            fDashboard.TopLevel = false;
+            fDashboard.AutoScroll = true;
+            pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
+            fDashboard.FormBorderStyle = FormBorderStyle.None;
+            fDashboard.Dock = DockStyle.Fill;
+            fDashboard.Show();
         }
 
         private void btnSlide_Click(object sender, EventArgs e)
