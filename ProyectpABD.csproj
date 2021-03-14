@@ -56,6 +56,18 @@
     <Compile Include="Models\DBParameter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Camion\Camion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Camion\Camion.Designer.cs">
+      <DependentUpon>Camion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Camion\frmCamion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Camion\frmCamion.Designer.cs">
+      <DependentUpon>frmCamion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,6 +81,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Camion\Camion.resx">
+      <DependentUpon>Camion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Camion\frmCamion.resx">
+      <DependentUpon>frmCamion.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,9 +100,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\arrow-left.png" />
   </ItemGroup>
