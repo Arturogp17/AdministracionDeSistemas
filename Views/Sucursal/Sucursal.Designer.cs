@@ -35,6 +35,7 @@
             this.idSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbSucursales = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridSucursales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conjunto)).BeginInit();
             this.SuspendLayout();
@@ -46,17 +47,17 @@
             this.idSucursal,
             this.nombre,
             this.direccion});
-            this.gridSucursales.Location = new System.Drawing.Point(38, 42);
+            this.gridSucursales.Location = new System.Drawing.Point(103, 81);
             this.gridSucursales.Name = "gridSucursales";
             this.gridSucursales.RowHeadersWidth = 51;
             this.gridSucursales.RowTemplate.Height = 24;
-            this.gridSucursales.Size = new System.Drawing.Size(714, 340);
+            this.gridSucursales.Size = new System.Drawing.Size(714, 308);
             this.gridSucursales.TabIndex = 0;
             this.gridSucursales.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSucursales_CellDoubleClick);
             // 
             // btAñadirSucursal
             // 
-            this.btAñadirSucursal.Location = new System.Drawing.Point(570, 395);
+            this.btAñadirSucursal.Location = new System.Drawing.Point(635, 402);
             this.btAñadirSucursal.Name = "btAñadirSucursal";
             this.btAñadirSucursal.Size = new System.Drawing.Size(88, 36);
             this.btAñadirSucursal.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             // btEliminar
             // 
-            this.btEliminar.Location = new System.Drawing.Point(664, 395);
+            this.btEliminar.Location = new System.Drawing.Point(729, 402);
             this.btEliminar.Name = "btEliminar";
             this.btEliminar.Size = new System.Drawing.Size(88, 36);
             this.btEliminar.TabIndex = 2;
@@ -99,11 +100,22 @@
             this.direccion.Name = "direccion";
             this.direccion.Width = 125;
             // 
+            // lbSucursales
+            // 
+            this.lbSucursales.AutoSize = true;
+            this.lbSucursales.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSucursales.Location = new System.Drawing.Point(103, 35);
+            this.lbSucursales.Name = "lbSucursales";
+            this.lbSucursales.Size = new System.Drawing.Size(141, 24);
+            this.lbSucursales.TabIndex = 3;
+            this.lbSucursales.Text = "SUCURSALES";
+            // 
             // Sucursal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1099, 450);
+            this.Controls.Add(this.lbSucursales);
             this.Controls.Add(this.btEliminar);
             this.Controls.Add(this.btAñadirSucursal);
             this.Controls.Add(this.gridSucursales);
@@ -113,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSucursales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conjunto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,5 +138,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idSucursal;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.Label lbSucursales;
     }
 }
