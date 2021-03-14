@@ -12,8 +12,8 @@ namespace ProyectpABD.Models
 {
     class DBIDisposable
     {
-        private string DB_SERVER = "ARTUROGARCA894D";
-        private string DATABASE = "UniversidadABD";
+        private string DB_SERVER = "DESKTOP-TU3UADU";
+        private string DATABASE = "paqueteriaSLP";
         private SqlConnection sqlConnection = null;
         private SqlCommand sqlCommand = null;
         bool disposed = false;

@@ -1,5 +1,6 @@
 ﻿using ProyectoABD.Properties;
 using ProyectoABD.Views.Camion;
+using ProyectoABD.Views.Sucursal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace ProyectpABD
         private void btnUsers_Click(object sender, EventArgs e)
         {
             pnlContainer.Controls.Clear();  //Limpia el contenedo
-            Camion fDashboard = new Camion(); //Crea la nueva forma a asignar
+            Sucursal fDashboard = new Sucursal(); //Crea la nueva forma a asignar
             fDashboard.Name = "frmAdmin";
             fDashboard.TopLevel = false;
             fDashboard.AutoScroll = true;
