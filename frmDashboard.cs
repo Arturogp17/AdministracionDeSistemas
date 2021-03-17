@@ -1,5 +1,6 @@
 ﻿using ProyectoABD.Properties;
 using ProyectoABD.Views.Camion;
+using ProyectoABD.Views.Personal;
 using ProyectoABD.Views.Sucursal;
 using System;
 using System.Collections.Generic;
@@ -58,6 +59,19 @@ namespace ProyectpABD
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_Personal(object sender, EventArgs e)
+        {
+            pnlContainer.Controls.Clear();  //Limpia el contenedo
+            Personal fDashboard = new Personal(); //Crea la nueva forma a asignar
+            fDashboard.Name = "frmAdmin";
+            fDashboard.TopLevel = false;
+            fDashboard.AutoScroll = true;
+            pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
+            fDashboard.FormBorderStyle = FormBorderStyle.None;
+            fDashboard.Dock = DockStyle.Fill;
+            fDashboard.Show();
         }
     }
 }
