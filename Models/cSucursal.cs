@@ -11,5 +11,13 @@ namespace ProyectoABD.Models
         public double idSucursal;
         public string direccion;
         public string nombre;
+
+
+        public override string ToString()
+        {
+            return idSucursal.ToString();
+        }
     }
+
+    
 }

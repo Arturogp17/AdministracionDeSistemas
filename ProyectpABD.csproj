@@ -52,6 +52,7 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\cPersonal.cs" />
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\DBParameter.cs" />
     <Compile Include="Models\cSucursal.cs" />
@@ -68,6 +69,18 @@
     </Compile>
     <Compile Include="Views\Camion\frmCamion.Designer.cs">
       <DependentUpon>frmCamion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Personal\frmPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Personal\frmPersonal.Designer.cs">
+      <DependentUpon>frmPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Personal\Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Personal\Personal.Designer.cs">
+      <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Sucursal\frmSucursal.cs">
       <SubType>Form</SubType>
@@ -99,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Camion\frmCamion.resx">
       <DependentUpon>frmCamion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Personal\frmPersonal.resx">
+      <DependentUpon>frmPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Personal\Personal.resx">
+      <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Sucursal\frmSucursal.resx">
       <DependentUpon>frmSucursal.cs</DependentUpon>
