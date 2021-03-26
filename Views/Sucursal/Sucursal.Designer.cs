@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.gridSucursales = new System.Windows.Forms.DataGridView();
-            this.btAñadirSucursal = new System.Windows.Forms.Button();
-            this.btEliminar = new System.Windows.Forms.Button();
-            this.conjunto = new System.Data.DataSet();
             this.idSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btAñadirSucursal = new System.Windows.Forms.Button();
+            this.btEliminar = new System.Windows.Forms.Button();
+            this.conjunto = new System.Data.DataSet();
             this.lbSucursales = new System.Windows.Forms.Label();
+            this.telefonos = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridSucursales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conjunto)).BeginInit();
             this.SuspendLayout();
@@ -46,38 +47,16 @@
             this.gridSucursales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idSucursal,
             this.nombre,
-            this.direccion});
+            this.direccion,
+            this.telefonos});
             this.gridSucursales.Location = new System.Drawing.Point(103, 81);
             this.gridSucursales.Name = "gridSucursales";
             this.gridSucursales.RowHeadersWidth = 51;
             this.gridSucursales.RowTemplate.Height = 24;
-            this.gridSucursales.Size = new System.Drawing.Size(714, 308);
+            this.gridSucursales.Size = new System.Drawing.Size(820, 308);
             this.gridSucursales.TabIndex = 0;
+            this.gridSucursales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSucursales_CellClick);
             this.gridSucursales.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSucursales_CellDoubleClick);
-            // 
-            // btAñadirSucursal
-            // 
-            this.btAñadirSucursal.Location = new System.Drawing.Point(635, 402);
-            this.btAñadirSucursal.Name = "btAñadirSucursal";
-            this.btAñadirSucursal.Size = new System.Drawing.Size(88, 36);
-            this.btAñadirSucursal.TabIndex = 1;
-            this.btAñadirSucursal.Text = "Añadir";
-            this.btAñadirSucursal.UseVisualStyleBackColor = true;
-            this.btAñadirSucursal.Click += new System.EventHandler(this.btAñadirSucursal_Click);
-            // 
-            // btEliminar
-            // 
-            this.btEliminar.Location = new System.Drawing.Point(729, 402);
-            this.btEliminar.Name = "btEliminar";
-            this.btEliminar.Size = new System.Drawing.Size(88, 36);
-            this.btEliminar.TabIndex = 2;
-            this.btEliminar.Text = "Eliminar";
-            this.btEliminar.UseVisualStyleBackColor = true;
-            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
-            // 
-            // conjunto
-            // 
-            this.conjunto.DataSetName = "NewDataSet";
             // 
             // idSucursal
             // 
@@ -100,6 +79,30 @@
             this.direccion.Name = "direccion";
             this.direccion.Width = 125;
             // 
+            // btAñadirSucursal
+            // 
+            this.btAñadirSucursal.Location = new System.Drawing.Point(717, 31);
+            this.btAñadirSucursal.Name = "btAñadirSucursal";
+            this.btAñadirSucursal.Size = new System.Drawing.Size(88, 36);
+            this.btAñadirSucursal.TabIndex = 1;
+            this.btAñadirSucursal.Text = "Añadir";
+            this.btAñadirSucursal.UseVisualStyleBackColor = true;
+            this.btAñadirSucursal.Click += new System.EventHandler(this.btAñadirSucursal_Click);
+            // 
+            // btEliminar
+            // 
+            this.btEliminar.Location = new System.Drawing.Point(826, 31);
+            this.btEliminar.Name = "btEliminar";
+            this.btEliminar.Size = new System.Drawing.Size(88, 36);
+            this.btEliminar.TabIndex = 2;
+            this.btEliminar.Text = "Eliminar";
+            this.btEliminar.UseVisualStyleBackColor = true;
+            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
+            // 
+            // conjunto
+            // 
+            this.conjunto.DataSetName = "NewDataSet";
+            // 
             // lbSucursales
             // 
             this.lbSucursales.AutoSize = true;
@@ -109,6 +112,13 @@
             this.lbSucursales.Size = new System.Drawing.Size(141, 24);
             this.lbSucursales.TabIndex = 3;
             this.lbSucursales.Text = "SUCURSALES";
+            // 
+            // telefonos
+            // 
+            this.telefonos.HeaderText = "Teléfono(s)";
+            this.telefonos.MinimumWidth = 6;
+            this.telefonos.Name = "telefonos";
+            this.telefonos.Width = 125;
             // 
             // Sucursal
             // 
@@ -139,5 +149,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.Label lbSucursales;
+        private System.Windows.Forms.DataGridViewButtonColumn telefonos;
     }
 }

@@ -53,6 +53,7 @@
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\cPersonal.cs" />
+    <Compile Include="Models\cTelefono.cs" />
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\DBParameter.cs" />
     <Compile Include="Models\cSucursal.cs" />
@@ -94,6 +95,18 @@
     <Compile Include="Views\Sucursal\Sucursal.Designer.cs">
       <DependentUpon>Sucursal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Telefono\frmTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Telefono\frmTelefono.Designer.cs">
+      <DependentUpon>frmTelefono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Telefono\Telefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Telefono\Telefono.Designer.cs">
+      <DependentUpon>Telefono.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Sucursal\Sucursal.resx">
       <DependentUpon>Sucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Telefono\frmTelefono.resx">
+      <DependentUpon>frmTelefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Telefono\Telefono.resx">
+      <DependentUpon>Telefono.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

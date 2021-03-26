@@ -105,5 +105,24 @@ namespace ProyectoABD.Views.Sucursal
                 FillGrid();
             }
         }
+
+        private void gridSucursales_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                /*
+                frmDashBoard fDashboard = new Sucursal();
+                MessageBox.Show("Hola");
+                pnlContainer.Controls.Clear();  //Limpia el contenedo
+                Sucursal fDashboard = new Sucursal(); //Crea la nueva forma a asignar
+                fDashboard.Name = "frmAdmin";
+                fDashboard.TopLevel = false;
+                fDashboard.AutoScroll = true;
+                pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
+                fDashboard.FormBorderStyle = FormBorderStyle.None;
+                fDashboard.Dock = DockStyle.Fill;
+                fDashboard.Show();*/
+            }
+        }
     }
 }

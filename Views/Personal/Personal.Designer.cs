@@ -62,83 +62,97 @@
             this.email,
             this.tipoEmpleado,
             this.Salario});
-            this.DGVPersonal.Location = new System.Drawing.Point(12, 51);
+            this.DGVPersonal.Location = new System.Drawing.Point(16, 63);
+            this.DGVPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGVPersonal.Name = "DGVPersonal";
-            this.DGVPersonal.Size = new System.Drawing.Size(958, 387);
+            this.DGVPersonal.RowHeadersWidth = 51;
+            this.DGVPersonal.Size = new System.Drawing.Size(1277, 476);
             this.DGVPersonal.TabIndex = 0;
             this.DGVPersonal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPersonal_CellDoubleClick);
             // 
             // idPersonal
             // 
             this.idPersonal.HeaderText = "idPersonal";
+            this.idPersonal.MinimumWidth = 6;
             this.idPersonal.Name = "idPersonal";
             this.idPersonal.ReadOnly = true;
             // 
             // nss
             // 
             this.nss.HeaderText = "nss";
+            this.nss.MinimumWidth = 6;
             this.nss.Name = "nss";
             this.nss.ReadOnly = true;
             // 
             // idSucursal
             // 
             this.idSucursal.HeaderText = "idSucursal";
+            this.idSucursal.MinimumWidth = 6;
             this.idSucursal.Name = "idSucursal";
             this.idSucursal.ReadOnly = true;
             // 
             // nombre
             // 
             this.nombre.HeaderText = "nombre";
+            this.nombre.MinimumWidth = 6;
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             // 
             // numeroCelular
             // 
             this.numeroCelular.HeaderText = "numeroCelular";
+            this.numeroCelular.MinimumWidth = 6;
             this.numeroCelular.Name = "numeroCelular";
             this.numeroCelular.ReadOnly = true;
             // 
             // edad
             // 
             this.edad.HeaderText = "edad";
+            this.edad.MinimumWidth = 6;
             this.edad.Name = "edad";
             this.edad.ReadOnly = true;
             // 
             // fechaNacimiento
             // 
             this.fechaNacimiento.HeaderText = "fechaNacimiento";
+            this.fechaNacimiento.MinimumWidth = 6;
             this.fechaNacimiento.Name = "fechaNacimiento";
             this.fechaNacimiento.ReadOnly = true;
             // 
             // direccion
             // 
             this.direccion.HeaderText = "direccion";
+            this.direccion.MinimumWidth = 6;
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
             // 
             // email
             // 
             this.email.HeaderText = "email";
+            this.email.MinimumWidth = 6;
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
             // tipoEmpleado
             // 
             this.tipoEmpleado.HeaderText = "tipoEmpleado";
+            this.tipoEmpleado.MinimumWidth = 6;
             this.tipoEmpleado.Name = "tipoEmpleado";
             this.tipoEmpleado.ReadOnly = true;
             // 
             // Salario
             // 
             this.Salario.HeaderText = "Salario";
+            this.Salario.MinimumWidth = 6;
             this.Salario.Name = "Salario";
             this.Salario.ReadOnly = true;
             // 
             // btn_FormAñadir
             // 
-            this.btn_FormAñadir.Location = new System.Drawing.Point(246, 13);
+            this.btn_FormAñadir.Location = new System.Drawing.Point(328, 16);
+            this.btn_FormAñadir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_FormAñadir.Name = "btn_FormAñadir";
-            this.btn_FormAñadir.Size = new System.Drawing.Size(75, 23);
+            this.btn_FormAñadir.Size = new System.Drawing.Size(100, 28);
             this.btn_FormAñadir.TabIndex = 1;
             this.btn_FormAñadir.Text = "Añadir";
             this.btn_FormAñadir.UseVisualStyleBackColor = true;
@@ -146,9 +160,10 @@
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(571, 13);
+            this.btn_Eliminar.Location = new System.Drawing.Point(761, 16);
+            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Eliminar.Size = new System.Drawing.Size(100, 28);
             this.btn_Eliminar.TabIndex = 2;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
@@ -157,21 +172,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 13);
+            this.label1.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.Size = new System.Drawing.Size(98, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "PERSONAL";
             // 
             // Personal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 450);
+            this.ClientSize = new System.Drawing.Size(1309, 554);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_FormAñadir);
             this.Controls.Add(this.DGVPersonal);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Personal";
             this.Text = "Personal";
             this.Load += new System.EventHandler(this.Personal_Load);
