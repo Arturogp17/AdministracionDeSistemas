@@ -48,6 +48,7 @@ namespace ProyectoABD.Views.Sucursal
                 {
                     tbNombre.Text = nombre;
                     tbDireccion.Text = direccion;
+                    lbSucursal.Text = "Modifica Sucursal";
                 }
             }
             catch (Exception ex)
@@ -56,7 +57,7 @@ namespace ProyectoABD.Views.Sucursal
             }
         }
 
-        private void btSave_Click(object sender, EventArgs e)
+        private void btAñadirSucursal_Click(object sender, EventArgs e)
         {
             string query = string.Empty;
             int res = 0;
@@ -78,9 +79,9 @@ namespace ProyectoABD.Views.Sucursal
                     query = "INSERT INTO PAQUETERIA.sucursal (nombre,direccion) VALUES (@nombre, @direccion)";
                 }
                 DBIDisposable dB = new DBIDisposable();
-                
+
                 res = dB.UpdateQuery(query, parameters);
-                
+
                 if (res > 0)
                 {
                     DialogResult = DialogResult.OK;

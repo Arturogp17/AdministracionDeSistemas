@@ -50,6 +50,7 @@ namespace ProyectoABD.Views.Telefono
                 {
                     cbSucursales.SelectedValue = idSucursal;
                     tbNumTelefono.Text = numtelefono.ToString();
+                    lbAddTel.Text = "Modifica Teléfono";
                 }
             }
             catch (Exception ex)
@@ -58,7 +59,8 @@ namespace ProyectoABD.Views.Telefono
             }
         }
 
-        private void btSave_Click(object sender, EventArgs e)
+
+        private void btAñadirSucursal_Click(object sender, EventArgs e)
         {
             string query = string.Empty;
             int res = 0;

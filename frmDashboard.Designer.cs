@@ -31,19 +31,21 @@ namespace ProyectpABD
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.pnlLeft = new System.Windows.Forms.Panel();
-            this.btTelefonos = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSucursal = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            this.btInicio = new System.Windows.Forms.Button();
+            this.btAsistencia = new System.Windows.Forms.Button();
+            this.btPago = new System.Windows.Forms.Button();
+            this.btTelefonos = new System.Windows.Forms.Button();
+            this.btHorarioPersonal = new System.Windows.Forms.Button();
+            this.btRutas = new System.Windows.Forms.Button();
+            this.btAsignacion = new System.Windows.Forms.Button();
+            this.btPersonal = new System.Windows.Forms.Button();
+            this.btCamiones = new System.Windows.Forms.Button();
+            this.btnSucursal = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
@@ -53,14 +55,16 @@ namespace ProyectpABD
             // 
             // pnlLeft
             // 
-            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(52)))), ((int)(((byte)(131)))));
+            this.pnlLeft.BackColor = System.Drawing.Color.DimGray;
+            this.pnlLeft.Controls.Add(this.btInicio);
+            this.pnlLeft.Controls.Add(this.btAsistencia);
+            this.pnlLeft.Controls.Add(this.btPago);
             this.pnlLeft.Controls.Add(this.btTelefonos);
-            this.pnlLeft.Controls.Add(this.button5);
-            this.pnlLeft.Controls.Add(this.button4);
-            this.pnlLeft.Controls.Add(this.button3);
-            this.pnlLeft.Controls.Add(this.button2);
-            this.pnlLeft.Controls.Add(this.button1);
-            this.pnlLeft.Controls.Add(this.textBox1);
+            this.pnlLeft.Controls.Add(this.btHorarioPersonal);
+            this.pnlLeft.Controls.Add(this.btRutas);
+            this.pnlLeft.Controls.Add(this.btAsignacion);
+            this.pnlLeft.Controls.Add(this.btPersonal);
+            this.pnlLeft.Controls.Add(this.btCamiones);
             this.pnlLeft.Controls.Add(this.btnSucursal);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
@@ -68,140 +72,6 @@ namespace ProyectpABD
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(333, 740);
             this.pnlLeft.TabIndex = 1;
-            // 
-            // btTelefonos
-            // 
-            this.btTelefonos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTelefonos.FlatAppearance.BorderSize = 2;
-            this.btTelefonos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btTelefonos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTelefonos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTelefonos.ForeColor = System.Drawing.Color.White;
-            this.btTelefonos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTelefonos.Location = new System.Drawing.Point(0, 409);
-            this.btTelefonos.Margin = new System.Windows.Forms.Padding(4);
-            this.btTelefonos.Name = "btTelefonos";
-            this.btTelefonos.Size = new System.Drawing.Size(333, 62);
-            this.btTelefonos.TabIndex = 18;
-            this.btTelefonos.Text = "Teléfonos";
-            this.btTelefonos.UseVisualStyleBackColor = true;
-            this.btTelefonos.Click += new System.EventHandler(this.btTelefonos_Click);
-            // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 340);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(333, 62);
-            this.button5.TabIndex = 17;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 271);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(333, 62);
-            this.button4.TabIndex = 16;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 202);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(333, 62);
-            this.button3.TabIndex = 15;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 478);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(333, 62);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Personal";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Btn_Personal);
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 133);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(333, 62);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Camiones";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(52)))), ((int)(((byte)(131)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(44, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(245, 39);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Paqueteria";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnSucursal
-            // 
-            this.btnSucursal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSucursal.FlatAppearance.BorderSize = 2;
-            this.btnSucursal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSucursal.ForeColor = System.Drawing.Color.White;
-            this.btnSucursal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSucursal.Location = new System.Drawing.Point(0, 64);
-            this.btnSucursal.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSucursal.Name = "btnSucursal";
-            this.btnSucursal.Size = new System.Drawing.Size(333, 62);
-            this.btnSucursal.TabIndex = 12;
-            this.btnSucursal.Text = "Sucursales";
-            this.btnSucursal.UseVisualStyleBackColor = true;
-            this.btnSucursal.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // pnlContainer
             // 
@@ -212,9 +82,11 @@ namespace ProyectpABD
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(1395, 683);
             this.pnlContainer.TabIndex = 2;
+            this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Controls.Add(this.btnSlide);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.btnClose);
@@ -266,6 +138,202 @@ namespace ProyectpABD
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btInicio
+            // 
+            this.btInicio.BackColor = System.Drawing.Color.CadetBlue;
+            this.btInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btInicio.FlatAppearance.BorderSize = 0;
+            this.btInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInicio.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInicio.ForeColor = System.Drawing.Color.White;
+            this.btInicio.Image = ((System.Drawing.Image)(resources.GetObject("btInicio.Image")));
+            this.btInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btInicio.Location = new System.Drawing.Point(1, 0);
+            this.btInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.btInicio.Name = "btInicio";
+            this.btInicio.Size = new System.Drawing.Size(333, 62);
+            this.btInicio.TabIndex = 13;
+            this.btInicio.Text = "  Paqueteria S.L.P";
+            this.btInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btInicio.UseVisualStyleBackColor = false;
+            this.btInicio.Click += new System.EventHandler(this.btInicio_Click);
+            // 
+            // btAsistencia
+            // 
+            this.btAsistencia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAsistencia.FlatAppearance.BorderSize = 0;
+            this.btAsistencia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAsistencia.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAsistencia.ForeColor = System.Drawing.Color.White;
+            this.btAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("btAsistencia.Image")));
+            this.btAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAsistencia.Location = new System.Drawing.Point(0, 572);
+            this.btAsistencia.Margin = new System.Windows.Forms.Padding(4);
+            this.btAsistencia.Name = "btAsistencia";
+            this.btAsistencia.Size = new System.Drawing.Size(333, 62);
+            this.btAsistencia.TabIndex = 20;
+            this.btAsistencia.Text = "  Asistencias";
+            this.btAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAsistencia.UseVisualStyleBackColor = true;
+            // 
+            // btPago
+            // 
+            this.btPago.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btPago.FlatAppearance.BorderSize = 0;
+            this.btPago.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPago.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPago.ForeColor = System.Drawing.Color.White;
+            this.btPago.Image = ((System.Drawing.Image)(resources.GetObject("btPago.Image")));
+            this.btPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPago.Location = new System.Drawing.Point(0, 511);
+            this.btPago.Margin = new System.Windows.Forms.Padding(4);
+            this.btPago.Name = "btPago";
+            this.btPago.Size = new System.Drawing.Size(333, 62);
+            this.btPago.TabIndex = 19;
+            this.btPago.Text = "  Pago";
+            this.btPago.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btPago.UseVisualStyleBackColor = true;
+            // 
+            // btTelefonos
+            // 
+            this.btTelefonos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTelefonos.FlatAppearance.BorderSize = 0;
+            this.btTelefonos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btTelefonos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTelefonos.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTelefonos.ForeColor = System.Drawing.Color.White;
+            this.btTelefonos.Image = ((System.Drawing.Image)(resources.GetObject("btTelefonos.Image")));
+            this.btTelefonos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTelefonos.Location = new System.Drawing.Point(0, 134);
+            this.btTelefonos.Margin = new System.Windows.Forms.Padding(4);
+            this.btTelefonos.Name = "btTelefonos";
+            this.btTelefonos.Size = new System.Drawing.Size(333, 62);
+            this.btTelefonos.TabIndex = 18;
+            this.btTelefonos.Text = "  Teléfonos";
+            this.btTelefonos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btTelefonos.UseVisualStyleBackColor = true;
+            this.btTelefonos.Click += new System.EventHandler(this.btTelefonos_Click);
+            // 
+            // btHorarioPersonal
+            // 
+            this.btHorarioPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btHorarioPersonal.FlatAppearance.BorderSize = 0;
+            this.btHorarioPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btHorarioPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHorarioPersonal.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHorarioPersonal.ForeColor = System.Drawing.Color.White;
+            this.btHorarioPersonal.Image = ((System.Drawing.Image)(resources.GetObject("btHorarioPersonal.Image")));
+            this.btHorarioPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btHorarioPersonal.Location = new System.Drawing.Point(-1, 260);
+            this.btHorarioPersonal.Margin = new System.Windows.Forms.Padding(4);
+            this.btHorarioPersonal.Name = "btHorarioPersonal";
+            this.btHorarioPersonal.Size = new System.Drawing.Size(333, 62);
+            this.btHorarioPersonal.TabIndex = 17;
+            this.btHorarioPersonal.Text = "  Horario Personal";
+            this.btHorarioPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btHorarioPersonal.UseVisualStyleBackColor = true;
+            // 
+            // btRutas
+            // 
+            this.btRutas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btRutas.FlatAppearance.BorderSize = 0;
+            this.btRutas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRutas.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRutas.ForeColor = System.Drawing.Color.White;
+            this.btRutas.Image = ((System.Drawing.Image)(resources.GetObject("btRutas.Image")));
+            this.btRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btRutas.Location = new System.Drawing.Point(0, 388);
+            this.btRutas.Margin = new System.Windows.Forms.Padding(4);
+            this.btRutas.Name = "btRutas";
+            this.btRutas.Size = new System.Drawing.Size(333, 62);
+            this.btRutas.TabIndex = 16;
+            this.btRutas.Text = "  Rutas";
+            this.btRutas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btRutas.UseVisualStyleBackColor = true;
+            // 
+            // btAsignacion
+            // 
+            this.btAsignacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAsignacion.FlatAppearance.BorderSize = 0;
+            this.btAsignacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btAsignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAsignacion.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAsignacion.ForeColor = System.Drawing.Color.White;
+            this.btAsignacion.Image = ((System.Drawing.Image)(resources.GetObject("btAsignacion.Image")));
+            this.btAsignacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAsignacion.Location = new System.Drawing.Point(0, 450);
+            this.btAsignacion.Margin = new System.Windows.Forms.Padding(4);
+            this.btAsignacion.Name = "btAsignacion";
+            this.btAsignacion.Size = new System.Drawing.Size(333, 62);
+            this.btAsignacion.TabIndex = 15;
+            this.btAsignacion.Text = "  Asignación Ruta";
+            this.btAsignacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAsignacion.UseVisualStyleBackColor = true;
+            // 
+            // btPersonal
+            // 
+            this.btPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btPersonal.FlatAppearance.BorderSize = 0;
+            this.btPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPersonal.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPersonal.ForeColor = System.Drawing.Color.White;
+            this.btPersonal.Image = ((System.Drawing.Image)(resources.GetObject("btPersonal.Image")));
+            this.btPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPersonal.Location = new System.Drawing.Point(0, 196);
+            this.btPersonal.Margin = new System.Windows.Forms.Padding(4);
+            this.btPersonal.Name = "btPersonal";
+            this.btPersonal.Size = new System.Drawing.Size(333, 62);
+            this.btPersonal.TabIndex = 14;
+            this.btPersonal.Text = "  Personal";
+            this.btPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btPersonal.UseVisualStyleBackColor = true;
+            this.btPersonal.Click += new System.EventHandler(this.Btn_Personal);
+            // 
+            // btCamiones
+            // 
+            this.btCamiones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btCamiones.FlatAppearance.BorderSize = 0;
+            this.btCamiones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btCamiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCamiones.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCamiones.ForeColor = System.Drawing.Color.White;
+            this.btCamiones.Image = ((System.Drawing.Image)(resources.GetObject("btCamiones.Image")));
+            this.btCamiones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btCamiones.Location = new System.Drawing.Point(0, 324);
+            this.btCamiones.Margin = new System.Windows.Forms.Padding(4);
+            this.btCamiones.Name = "btCamiones";
+            this.btCamiones.Size = new System.Drawing.Size(333, 62);
+            this.btCamiones.TabIndex = 13;
+            this.btCamiones.Text = "  Camiones";
+            this.btCamiones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btCamiones.UseVisualStyleBackColor = true;
+            this.btCamiones.Click += new System.EventHandler(this.btCamiones_Click);
+            // 
+            // btnSucursal
+            // 
+            this.btnSucursal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSucursal.FlatAppearance.BorderSize = 0;
+            this.btnSucursal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSucursal.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSucursal.ForeColor = System.Drawing.Color.White;
+            this.btnSucursal.Image = ((System.Drawing.Image)(resources.GetObject("btnSucursal.Image")));
+            this.btnSucursal.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnSucursal.Location = new System.Drawing.Point(0, 63);
+            this.btnSucursal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSucursal.Name = "btnSucursal";
+            this.btnSucursal.Size = new System.Drawing.Size(333, 62);
+            this.btnSucursal.TabIndex = 12;
+            this.btnSucursal.Text = "  Sucursales";
+            this.btnSucursal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSucursal.UseVisualStyleBackColor = true;
+            this.btnSucursal.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -279,7 +347,6 @@ namespace ProyectpABD
             this.Name = "frmDashboard";
             this.Text = "Form1Proyecto ADB";
             this.pnlLeft.ResumeLayout(false);
-            this.pnlLeft.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
@@ -296,13 +363,15 @@ namespace ProyectpABD
         private System.Windows.Forms.PictureBox btnMinimize;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox btnSlide;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btTelefonos;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btHorarioPersonal;
+        private System.Windows.Forms.Button btRutas;
+        private System.Windows.Forms.Button btAsignacion;
+        private System.Windows.Forms.Button btPersonal;
+        private System.Windows.Forms.Button btCamiones;
+        private System.Windows.Forms.Button btAsistencia;
+        private System.Windows.Forms.Button btPago;
+        private System.Windows.Forms.Button btInicio;
     }
 }
 

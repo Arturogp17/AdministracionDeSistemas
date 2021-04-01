@@ -42,8 +42,10 @@
             this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_FormAñadir = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbPersonal = new System.Windows.Forms.Label();
+            this.panelPersonal = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPersonal)).BeginInit();
+            this.panelPersonal.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGVPersonal
@@ -62,11 +64,11 @@
             this.email,
             this.tipoEmpleado,
             this.Salario});
-            this.DGVPersonal.Location = new System.Drawing.Point(16, 63);
-            this.DGVPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGVPersonal.Location = new System.Drawing.Point(16, 171);
+            this.DGVPersonal.Margin = new System.Windows.Forms.Padding(4);
             this.DGVPersonal.Name = "DGVPersonal";
             this.DGVPersonal.RowHeadersWidth = 51;
-            this.DGVPersonal.Size = new System.Drawing.Size(1277, 476);
+            this.DGVPersonal.Size = new System.Drawing.Size(1277, 368);
             this.DGVPersonal.TabIndex = 0;
             this.DGVPersonal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPersonal_CellDoubleClick);
             // 
@@ -149,53 +151,74 @@
             // 
             // btn_FormAñadir
             // 
-            this.btn_FormAñadir.Location = new System.Drawing.Point(328, 16);
-            this.btn_FormAñadir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_FormAñadir.BackColor = System.Drawing.Color.Gray;
+            this.btn_FormAñadir.FlatAppearance.BorderSize = 0;
+            this.btn_FormAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FormAñadir.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_FormAñadir.ForeColor = System.Drawing.Color.White;
+            this.btn_FormAñadir.Location = new System.Drawing.Point(16, 121);
+            this.btn_FormAñadir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_FormAñadir.Name = "btn_FormAñadir";
-            this.btn_FormAñadir.Size = new System.Drawing.Size(100, 28);
+            this.btn_FormAñadir.Size = new System.Drawing.Size(100, 40);
             this.btn_FormAñadir.TabIndex = 1;
             this.btn_FormAñadir.Text = "Añadir";
-            this.btn_FormAñadir.UseVisualStyleBackColor = true;
+            this.btn_FormAñadir.UseVisualStyleBackColor = false;
             this.btn_FormAñadir.Click += new System.EventHandler(this.btn_FormAñadir_Click);
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(761, 16);
-            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Eliminar.BackColor = System.Drawing.Color.Gray;
+            this.btn_Eliminar.FlatAppearance.BorderSize = 0;
+            this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Eliminar.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
+            this.btn_Eliminar.Location = new System.Drawing.Point(150, 121);
+            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(100, 28);
+            this.btn_Eliminar.Size = new System.Drawing.Size(100, 40);
             this.btn_Eliminar.TabIndex = 2;
             this.btn_Eliminar.Text = "Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.UseVisualStyleBackColor = false;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
-            // label1
+            // lbPersonal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "PERSONAL";
+            this.lbPersonal.AutoSize = true;
+            this.lbPersonal.Font = new System.Drawing.Font("Raleway", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPersonal.ForeColor = System.Drawing.Color.White;
+            this.lbPersonal.Location = new System.Drawing.Point(27, 28);
+            this.lbPersonal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPersonal.Name = "lbPersonal";
+            this.lbPersonal.Size = new System.Drawing.Size(162, 33);
+            this.lbPersonal.TabIndex = 3;
+            this.lbPersonal.Text = "PERSONAL";
+            // 
+            // panelPersonal
+            // 
+            this.panelPersonal.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelPersonal.Controls.Add(this.lbPersonal);
+            this.panelPersonal.Location = new System.Drawing.Point(0, 16);
+            this.panelPersonal.Name = "panelPersonal";
+            this.panelPersonal.Size = new System.Drawing.Size(1000, 90);
+            this.panelPersonal.TabIndex = 4;
             // 
             // Personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1309, 554);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelPersonal);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_FormAñadir);
             this.Controls.Add(this.DGVPersonal);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Personal";
             this.Text = "Personal";
             this.Load += new System.EventHandler(this.Personal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVPersonal)).EndInit();
+            this.panelPersonal.ResumeLayout(false);
+            this.panelPersonal.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -215,6 +238,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Salario;
         private System.Windows.Forms.Button btn_FormAñadir;
         private System.Windows.Forms.Button btn_Eliminar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbPersonal;
+        private System.Windows.Forms.Panel panelPersonal;
     }
 }

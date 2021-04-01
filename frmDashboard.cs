@@ -1,5 +1,6 @@
 ﻿using ProyectoABD.Properties;
 using ProyectoABD.Views.Camion;
+using ProyectoABD.Views.Home;
 using ProyectoABD.Views.Personal;
 using ProyectoABD.Views.Sucursal;
 using ProyectoABD.Views.Telefono;
@@ -20,6 +21,20 @@ namespace ProyectpABD
         public frmDashboard()
         {
             InitializeComponent();
+            Home();
+        }
+
+        public void Home()
+        {
+            pnlContainer.Controls.Clear();  //Limpia el contenedo
+            Home fDashboard = new Home(); //Crea la nueva forma a asignar
+            fDashboard.Name = "frmAdmin";
+            fDashboard.TopLevel = false;
+            fDashboard.AutoScroll = true;
+            pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
+            fDashboard.FormBorderStyle = FormBorderStyle.None;
+            fDashboard.Dock = DockStyle.Fill;
+            fDashboard.Show();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -86,6 +101,37 @@ namespace ProyectpABD
             fDashboard.FormBorderStyle = FormBorderStyle.None;
             fDashboard.Dock = DockStyle.Fill;
             fDashboard.Show();
+        }
+
+        private void btCamiones_Click(object sender, EventArgs e)
+        {
+            pnlContainer.Controls.Clear();  //Limpia el contenedo
+            Camion fDashboard = new Camion(); //Crea la nueva forma a asignar
+            fDashboard.Name = "frmAdmin";
+            fDashboard.TopLevel = false;
+            fDashboard.AutoScroll = true;
+            pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
+            fDashboard.FormBorderStyle = FormBorderStyle.None;
+            fDashboard.Dock = DockStyle.Fill;
+            fDashboard.Show();
+        }
+
+        private void btInicio_Click(object sender, EventArgs e)
+        {
+            pnlContainer.Controls.Clear();  //Limpia el contenedo
+            Home fDashboard = new Home(); //Crea la nueva forma a asignar
+            fDashboard.Name = "frmAdmin";
+            fDashboard.TopLevel = false;
+            fDashboard.AutoScroll = true;
+            pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
+            fDashboard.FormBorderStyle = FormBorderStyle.None;
+            fDashboard.Dock = DockStyle.Fill;
+            fDashboard.Show();
+        }
+
+        private void pnlContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

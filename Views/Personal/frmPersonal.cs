@@ -108,6 +108,7 @@ namespace ProyectoABD.Views.Personal
                     TBDireccion.Text = direccion;
                     TBEmail.Text = email;
                     CBTipoEmpleado.Text = tipoEmpleado;
+                    lbPersonal.Text = "Modifica Personal";
 
                 }
             }
@@ -118,11 +119,12 @@ namespace ProyectoABD.Views.Personal
 
         }
 
-        private void btn_Agregar_Click(object sender, EventArgs e)
+
+        private void btAñadirPersonal_Click(object sender, EventArgs e)
         {
             string query = string.Empty;
             int res = 0;
-            
+
             int r = 0;
             double indSuc = sucursales.Find(x => x.idSucursal == Convert.ToInt32(CBSucursal.Text.Split(' ')[0])).idSucursal;
             List<DBParameter> parameters = new List<DBParameter>
@@ -152,9 +154,9 @@ namespace ProyectoABD.Views.Personal
                     query = "INSERT INTO PAQUETERIA.personal (nss,idSucursal,nombre,numeroCelular,edad,fechaNacimiento,direccion,email,tipoEmpleado,salario) VALUES (@nss, @idSucursal,@nombre,@numeroCelular,@edad,@fechaNacimiento,@direccion,@email,@tipoEmpleado,@salario)";
                 }
                 DBIDisposable dB = new DBIDisposable();
-                
+
                 res = dB.UpdateQuery(query, parameters);
-                
+
                 if (res > 0)
                 {
                     DialogResult = DialogResult.OK;
@@ -165,6 +167,11 @@ namespace ProyectoABD.Views.Personal
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void TBEmail_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
