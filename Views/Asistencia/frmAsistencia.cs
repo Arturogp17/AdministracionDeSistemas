@@ -86,9 +86,10 @@ namespace ProyectoABD.Views.Asistencia
                     CBPersonal.Enabled = false;
                     TBHoraLlegada.Text = HoraLlegada;
                     TBHoraLlegada.ReadOnly = true;
+                    TBHoraSalida.ReadOnly = true;
                     TBHoraSalida.Text = HoraSalida;
 
-
+                    Btn_Agregar.Visible = true;
                 }
                 else
                 {

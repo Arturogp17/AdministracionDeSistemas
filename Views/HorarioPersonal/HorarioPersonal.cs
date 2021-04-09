@@ -29,7 +29,9 @@ namespace ProyectoABD.Views.HorarioPersonal
         {
             DGVHorarioPersonal.Rows.Clear();
             List<cHorarioPersonal> LisHoraPers = new List<cHorarioPersonal>();
-            string query = @"SELECT * FROM PAQUETERIA.horarioPersonal";
+            string query = @"SELECT * FROM PAQUETERIA.horarioPersonal E
+                             JOIN PAQUETERIA.personal D
+                             ON E.idPersonal = D.idPersonal";
 
             try
             {
@@ -43,13 +45,14 @@ namespace ProyectoABD.Views.HorarioPersonal
                     hp.idPersonal = Convert.ToInt32(reader["idPersonal"]);
                     hp.Horas = Convert.ToString(reader["Horas"]);
                     hp.Horario = Convert.ToString(reader["Horario"]);
+                    hp.NombrePersonal = Convert.ToString(reader["nombre"]);
 
                     LisHoraPers.Add(hp);
 
                 }
                 foreach (var item in LisHoraPers)
                 {
-                    string[] row = new string[] { item.idPersonal.ToString(), item.Horas, item.Horario };
+                    string[] row = new string[] { item.idPersonal.ToString() + " - "+ item.NombrePersonal, item.Horas, item.Horario };
                     DGVHorarioPersonal.Rows.Add(row);
                 }
             }
@@ -78,7 +81,7 @@ namespace ProyectoABD.Views.HorarioPersonal
                     int res = 0;
                     List<DBParameter> parameters = new List<DBParameter>
                     {
-                        new DBParameter("@idPersonal", Convert.ToInt32(DGVHorarioPersonal.SelectedRows[0].Cells[0].Value))
+                        new DBParameter("@idPersonal", Convert.ToInt32(DGVHorarioPersonal.SelectedRows[0].Cells[0].Value.ToString().Split(' ')[0].ToString()))
                     };
                     string query = "DELETE FROM PAQUETERIA.horarioPersonal WHERE idPersonal = @idPersonal";
                     DBIDisposable dB = new DBIDisposable();
@@ -99,7 +102,8 @@ namespace ProyectoABD.Views.HorarioPersonal
 
         private void DGVHorarioPersonal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            double idPersonal = Convert.ToInt32(DGVHorarioPersonal.Rows[e.RowIndex].Cells["Id_Personal"].Value);
+
+            double idPersonal = Convert.ToInt32(DGVHorarioPersonal.Rows[e.RowIndex].Cells["Id_Personal"].Value.ToString().Split(' ')[0].ToString());
             string Horas = Convert.ToString(DGVHorarioPersonal.Rows[e.RowIndex].Cells["Horas"].Value);
             string Horario = Convert.ToString(DGVHorarioPersonal.Rows[e.RowIndex].Cells["Horario"].Value);
 

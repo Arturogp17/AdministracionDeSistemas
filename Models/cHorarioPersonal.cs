@@ -10,6 +10,7 @@ namespace ProyectoABD.Models
     {
         public double idPersonal;
         public string Horas;
+        public string NombrePersonal;
         public string Horario;
 
 

@@ -12,6 +12,7 @@ namespace ProyectoABD.Models
         public string horarioLlegada;
         public string horarioSalida;
         public string fecha;
+        public string nombre;
 
     }
 }

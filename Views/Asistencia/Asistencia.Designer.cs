@@ -37,6 +37,10 @@
             this.HorarioLlegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HorarioSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CBPersonal = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BTLlegada = new System.Windows.Forms.Button();
+            this.BTSalida = new System.Windows.Forms.Button();
             this.panelPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVAsistencia)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +68,7 @@
             // 
             // Btn_Eliminar
             // 
-            this.Btn_Eliminar.Location = new System.Drawing.Point(533, 91);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(624, 95);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(75, 23);
             this.Btn_Eliminar.TabIndex = 10;
@@ -74,7 +78,7 @@
             // 
             // Btn_Añadir
             // 
-            this.Btn_Añadir.Location = new System.Drawing.Point(220, 91);
+            this.Btn_Añadir.Location = new System.Drawing.Point(713, 95);
             this.Btn_Añadir.Name = "Btn_Añadir";
             this.Btn_Añadir.Size = new System.Drawing.Size(75, 23);
             this.Btn_Añadir.TabIndex = 9;
@@ -121,11 +125,52 @@
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             // 
+            // CBPersonal
+            // 
+            this.CBPersonal.FormattingEnabled = true;
+            this.CBPersonal.Location = new System.Drawing.Point(93, 93);
+            this.CBPersonal.Name = "CBPersonal";
+            this.CBPersonal.Size = new System.Drawing.Size(121, 21);
+            this.CBPersonal.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Id_Personal";
+            // 
+            // BTLlegada
+            // 
+            this.BTLlegada.Location = new System.Drawing.Point(285, 95);
+            this.BTLlegada.Name = "BTLlegada";
+            this.BTLlegada.Size = new System.Drawing.Size(101, 23);
+            this.BTLlegada.TabIndex = 13;
+            this.BTLlegada.Text = "Registra Llegada";
+            this.BTLlegada.UseVisualStyleBackColor = true;
+            this.BTLlegada.Click += new System.EventHandler(this.BTLlegada_Click);
+            // 
+            // BTSalida
+            // 
+            this.BTSalida.Location = new System.Drawing.Point(421, 95);
+            this.BTSalida.Name = "BTSalida";
+            this.BTSalida.Size = new System.Drawing.Size(112, 23);
+            this.BTSalida.TabIndex = 14;
+            this.BTSalida.Text = "Registra Salida";
+            this.BTSalida.UseVisualStyleBackColor = true;
+            this.BTSalida.Click += new System.EventHandler(this.BTSalida_Click);
+            // 
             // Asistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 368);
+            this.Controls.Add(this.BTSalida);
+            this.Controls.Add(this.BTLlegada);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CBPersonal);
             this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Btn_Añadir);
             this.Controls.Add(this.DGVAsistencia);
@@ -137,6 +182,7 @@
             this.panelPersonal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVAsistencia)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -151,5 +197,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HorarioLlegada;
         private System.Windows.Forms.DataGridViewTextBoxColumn HorarioSalida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.ComboBox CBPersonal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BTLlegada;
+        private System.Windows.Forms.Button BTSalida;
     }
 }

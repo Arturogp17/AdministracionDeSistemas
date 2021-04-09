@@ -32,11 +32,11 @@
             this.Btn_Añadir = new System.Windows.Forms.Button();
             this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.DGVHorarioPersonal = new System.Windows.Forms.DataGridView();
+            this.panelPersonal = new System.Windows.Forms.Panel();
+            this.lbHorarioPersonal = new System.Windows.Forms.Label();
             this.Id_Personal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Horas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelPersonal = new System.Windows.Forms.Panel();
-            this.lbHorarioPersonal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVHorarioPersonal)).BeginInit();
             this.panelPersonal.SuspendLayout();
             this.SuspendLayout();
@@ -83,25 +83,6 @@
             this.DGVHorarioPersonal.TabIndex = 5;
             this.DGVHorarioPersonal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVHorarioPersonal_CellDoubleClick);
             // 
-            // Id_Personal
-            // 
-            this.Id_Personal.FillWeight = 70F;
-            this.Id_Personal.HeaderText = "Id_Personal";
-            this.Id_Personal.Name = "Id_Personal";
-            this.Id_Personal.ReadOnly = true;
-            // 
-            // Horas
-            // 
-            this.Horas.FillWeight = 60F;
-            this.Horas.HeaderText = "Horas";
-            this.Horas.Name = "Horas";
-            this.Horas.ReadOnly = true;
-            // 
-            // Horario
-            // 
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            // 
             // panelPersonal
             // 
             this.panelPersonal.BackColor = System.Drawing.Color.DarkCyan;
@@ -122,6 +103,25 @@
             this.lbHorarioPersonal.Size = new System.Drawing.Size(242, 26);
             this.lbHorarioPersonal.TabIndex = 3;
             this.lbHorarioPersonal.Text = "HORARIO PERSONAL";
+            // 
+            // Id_Personal
+            // 
+            this.Id_Personal.FillWeight = 70F;
+            this.Id_Personal.HeaderText = "Id_Personal - nombre";
+            this.Id_Personal.Name = "Id_Personal";
+            this.Id_Personal.ReadOnly = true;
+            // 
+            // Horas
+            // 
+            this.Horas.FillWeight = 60F;
+            this.Horas.HeaderText = "Horas";
+            this.Horas.Name = "Horas";
+            this.Horas.ReadOnly = true;
+            // 
+            // Horario
+            // 
+            this.Horario.HeaderText = "Horario";
+            this.Horario.Name = "Horario";
             // 
             // HorarioPersonal
             // 
@@ -150,10 +150,10 @@
         private System.Windows.Forms.Button Btn_Añadir;
         private System.Windows.Forms.Button Btn_Eliminar;
         private System.Windows.Forms.DataGridView DGVHorarioPersonal;
+        private System.Windows.Forms.Panel panelPersonal;
+        private System.Windows.Forms.Label lbHorarioPersonal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Personal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Horas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
-        private System.Windows.Forms.Panel panelPersonal;
-        private System.Windows.Forms.Label lbHorarioPersonal;
     }
 }
