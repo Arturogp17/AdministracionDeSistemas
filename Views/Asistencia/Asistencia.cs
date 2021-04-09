@@ -29,7 +29,7 @@ namespace ProyectoABD.Views.Asistencia
             FillGrid();
             RecuperaPersonal();
             Btn_Añadir.Visible = false;
-            Btn_Eliminar.Visible = false;
+            //Btn_Eliminar.Visible = false;
         }
 
         public void RecuperaPersonal()
@@ -136,19 +136,20 @@ namespace ProyectoABD.Views.Asistencia
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
+            
             if (DGVAsistencia.SelectedRows.Count > 0 )
             {
-                
                 try
                 {
                     int res = 0;
+                    string fechaInter = AcomodaOrdenFecha(DGVAsistencia.SelectedRows[0].Cells[3].Value.ToString());
+
                     List<DBParameter> parameters = new List<DBParameter>
                     {
-                        new DBParameter("@idPersonal", Convert.ToInt32(DGVAsistencia.SelectedRows[0].Cells[0].Value))
+                        new DBParameter("@horarioLlegada", DGVAsistencia.SelectedRows[0].Cells[1].Value.ToString()),//Columna de llegada
+                        new DBParameter("@fecha", fechaInter)//Columna de Salida
                     };
-
-                    
-                    string query = "DELETE FROM PAQUETERIA.asistencia WHERE idPersonal = @idPersonal";
+                    string query = "DELETE FROM PAQUETERIA.asistencia WHERE horarioLlegada = @horarioLlegada AND fecha = @fecha";
                     DBIDisposable dB = new DBIDisposable();
 
                     res = dB.UpdateQuery(query, parameters);
@@ -163,6 +164,15 @@ namespace ProyectoABD.Views.Asistencia
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        public string AcomodaOrdenFecha(string fecha)
+        {
+            string dia = fecha.Substring(3, 2);
+            string mes = fecha.Substring(0, 2);
+            string año = fecha.Substring(6, 4);
+
+            return dia + "/" + mes + "/" + año;
         }
 
         private void DGVAsistencia_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
