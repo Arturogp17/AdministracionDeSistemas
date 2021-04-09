@@ -116,6 +116,7 @@ namespace ProyectpABD
             fDashboard.FormBorderStyle = FormBorderStyle.None;
             fDashboard.Dock = DockStyle.Fill;
             fDashboard.Show();
+
         }
 
         private void btInicio_Click(object sender, EventArgs e)
