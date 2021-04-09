@@ -64,7 +64,7 @@
             this.panelCamion.Location = new System.Drawing.Point(11, 11);
             this.panelCamion.Margin = new System.Windows.Forms.Padding(2);
             this.panelCamion.Name = "panelCamion";
-            this.panelCamion.Size = new System.Drawing.Size(296, 39);
+            this.panelCamion.Size = new System.Drawing.Size(491, 39);
             this.panelCamion.TabIndex = 13;
             // 
             // label1

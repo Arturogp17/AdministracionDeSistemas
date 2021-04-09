@@ -84,7 +84,18 @@ namespace ProyectoABD.Views.HorarioPersonal
 
                 if (idPersonal > 0)//Editar y tener que recargar valores
                 {
-                    CBPersonal.Enabled = false;
+                    CBPersonal.Items.Clear();
+
+                    double nssPAct = personales.Find(x => x.idPersonal == idPersonal).nss;
+                    string nombreAct = personales.Find(x => x.idPersonal == idPersonal).nombre;
+                    string campCB = nssPAct.ToString() + " " + nombreAct;
+
+                    CBPersonal.Items.Add(campCB);
+                    CBPersonal.Text = campCB;
+                     
+                    
+                    
+                    CBPersonal.DropDownStyle = ComboBoxStyle.DropDownList;
                     TBHoras.Text = Horas;
                     ChequeaBoxHorario(Horario);
 

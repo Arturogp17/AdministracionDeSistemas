@@ -52,13 +52,15 @@ namespace ProyectoABD.Views.Personal
                     p.email = Convert.ToString(reader["email"]);
                     p.tipoEmpleado = Convert.ToString(reader["tipoEmpleado"]);
                     p.salario = Convert.ToInt32(reader["salario"]);
+                    p.contadorAsistencias = Convert.ToInt32(reader["contadorAsistencia"]);
+                    p.cuentaBancaria = Convert.ToString(reader["cuenta"]);
 
                     LisPersonal.Add(p);
 
                 }
                 foreach (var item in LisPersonal)
                 {
-                    string[] row = new string[] { item.idPersonal.ToString(), item.nss.ToString(), item.idSucursal.ToString(), item.nombre, item.numeroCelular, item.edad.ToString(), item.fechaNacimiento, item.direccion, item.email, item.tipoEmpleado, item.salario.ToString() };
+                    string[] row = new string[] { item.idPersonal.ToString(), item.nombre, item.cuentaBancaria.ToString(), item.contadorAsistencias.ToString(), item.nss.ToString(), item.idSucursal.ToString(),  item.numeroCelular, item.edad.ToString(), item.fechaNacimiento, item.direccion, item.email, item.tipoEmpleado, item.salario.ToString() };
                     DGVPersonal.Rows.Add(row);
                 }
             }
@@ -91,8 +93,11 @@ namespace ProyectoABD.Views.Personal
             string email = Convert.ToString(DGVPersonal.Rows[e.RowIndex].Cells["email"].Value);
             string tipoEmpleado = Convert.ToString(DGVPersonal.Rows[e.RowIndex].Cells["tipoEmpleado"].Value);
             double salario = Convert.ToInt32(DGVPersonal.Rows[e.RowIndex].Cells["Salario"].Value);
+            string cuentaBanca = Convert.ToString(DGVPersonal.Rows[e.RowIndex].Cells["cuentaBancaria"].Value);
 
-            frmPersonal fp = new frmPersonal(idPersonal, nss, idSucursal, nombre, numeroCelular, edad, fechaNacimiento, direccion, email, tipoEmpleado, salario);
+
+
+            frmPersonal fp = new frmPersonal(idPersonal, nss, idSucursal, nombre, numeroCelular, edad, fechaNacimiento, direccion, email, tipoEmpleado, salario,cuentaBanca);
             fp.Text = "Modificar sucursal";
             if (fp.ShowDialog() == DialogResult.OK)
             {
