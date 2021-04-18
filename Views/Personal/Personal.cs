@@ -36,6 +36,8 @@ namespace ProyectoABD.Views.Personal
 
                 DBIDisposable dB = new DBIDisposable();
                 SqlDataReader reader = dB.DoQuery(query);
+
+
                 while (reader.Read())
                 {
 

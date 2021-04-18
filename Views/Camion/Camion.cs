@@ -23,5 +23,10 @@ namespace ProyectoABD.Views.Camion
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void BtAñadirCamion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
