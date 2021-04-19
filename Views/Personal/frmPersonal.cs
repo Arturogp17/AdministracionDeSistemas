@@ -45,9 +45,6 @@ namespace ProyectoABD.Views.Personal
             tipoEmpleado = tiEmpleado;
             salario = sal;
             cuentaBanca = cueBan;
-
-
-            
         }
 
 

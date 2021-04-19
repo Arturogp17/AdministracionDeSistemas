@@ -119,7 +119,7 @@
             // 
             this.panelPersonal.BackColor = System.Drawing.Color.DarkCyan;
             this.panelPersonal.Controls.Add(this.lbTelefonos);
-            this.panelPersonal.Location = new System.Drawing.Point(-1, 16);
+            this.panelPersonal.Location = new System.Drawing.Point(0, 16);
             this.panelPersonal.Name = "panelPersonal";
             this.panelPersonal.Size = new System.Drawing.Size(1000, 90);
             this.panelPersonal.TabIndex = 5;

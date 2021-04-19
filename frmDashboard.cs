@@ -4,6 +4,7 @@ using ProyectoABD.Views.Camion;
 using ProyectoABD.Views.Home;
 using ProyectoABD.Views.HorarioPersonal;
 using ProyectoABD.Views.Personal;
+using ProyectoABD.Views.Ruta;
 using ProyectoABD.Views.Sucursal;
 using ProyectoABD.Views.Telefono;
 using System;
@@ -153,6 +154,19 @@ namespace ProyectpABD
         {
             pnlContainer.Controls.Clear();  //Limpia el contenedo
             Asistencia fDashboard = new Asistencia(); //Crea la nueva forma a asignar
+            fDashboard.Name = "frmAdmin";
+            fDashboard.TopLevel = false;
+            fDashboard.AutoScroll = true;
+            pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
+            fDashboard.FormBorderStyle = FormBorderStyle.None;
+            fDashboard.Dock = DockStyle.Fill;
+            fDashboard.Show();
+        }
+
+        private void btRutas_Click(object sender, EventArgs e)
+        {
+            pnlContainer.Controls.Clear();  //Limpia el contenedo
+            Ruta fDashboard = new Ruta(); //Crea la nueva forma a asignar
             fDashboard.Name = "frmAdmin";
             fDashboard.TopLevel = false;
             fDashboard.AutoScroll = true;

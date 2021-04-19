@@ -96,5 +96,30 @@ namespace ProyectoABD.Views.Telefono
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void lbSucursal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelCamion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbSucursales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNumTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTelefono_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

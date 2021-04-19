@@ -11,7 +11,6 @@ namespace ProyectoABD.Models
         public int idSucursal { get; set; }
         public string nombre { get; set; }
         public string direccion { get; set; }
-
         public string idNombre { get { return idSucursal + "-" + nombre; } }
 
 

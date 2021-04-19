@@ -53,8 +53,10 @@
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\cAsistencia.cs" />
+    <Compile Include="Models\cCamionPrueba.cs" />
     <Compile Include="Models\cHorarioPersonal.cs" />
     <Compile Include="Models\cPersonal.cs" />
+    <Compile Include="Models\cRuta.cs" />
     <Compile Include="Models\cTelefono.cs" />
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\DBParameter.cs" />
@@ -114,6 +116,18 @@
     </Compile>
     <Compile Include="Views\Personal\Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ruta\frmRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ruta\frmRuta.Designer.cs">
+      <DependentUpon>frmRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ruta\Ruta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ruta\Ruta.Designer.cs">
+      <DependentUpon>Ruta.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Sucursal\frmSucursal.cs">
       <SubType>Form</SubType>
@@ -178,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Personal\Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ruta\frmRuta.resx">
+      <DependentUpon>frmRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ruta\Ruta.resx">
+      <DependentUpon>Ruta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Sucursal\frmSucursal.resx">
       <DependentUpon>frmSucursal.cs</DependentUpon>
