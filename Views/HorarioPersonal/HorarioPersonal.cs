@@ -35,7 +35,7 @@ namespace ProyectoABD.Views.HorarioPersonal
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -84,7 +84,7 @@ namespace ProyectoABD.Views.HorarioPersonal
                         new DBParameter("@idPersonal", Convert.ToInt32(DGVHorarioPersonal.SelectedRows[0].Cells[0].Value.ToString().Split(' ')[0].ToString()))
                     };
                     string query = "DELETE FROM PAQUETERIA.horarioPersonal WHERE idPersonal = @idPersonal";
-                    DBIDisposable dB = new DBIDisposable();
+                    DB dB = new DB();
 
                     res = dB.UpdateQuery(query, parameters);
 

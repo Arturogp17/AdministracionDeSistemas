@@ -33,7 +33,7 @@ namespace ProyectoABD.Views.Telefono
                 List<cSucursal> sucursales = new List<cSucursal>();
                 string query = @"SELECT * FROM PAQUETERIA.sucursal";
 
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -81,7 +81,7 @@ namespace ProyectoABD.Views.Telefono
                 {
                     query = "INSERT INTO PAQUETERIA.telefono (idSucursal, telefono) VALUES (@idSucursal, @telefono)";
                 }
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
 

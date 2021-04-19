@@ -37,7 +37,7 @@ namespace ProyectoABD.Views.Telefono
             string query = @"SELECT * FROM PAQUETERIA.telefono INNER JOIN PAQUETERIA.sucursal ON PAQUETERIA.telefono.idSucursal = PAQUETERIA.sucursal.idSucursal ";
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -91,7 +91,7 @@ namespace ProyectoABD.Views.Telefono
                         new DBParameter("@telefono", Convert.ToInt32(gridTelefonos.SelectedRows[0].Cells[1].Value))
                     };
                     string query = "DELETE FROM PAQUETERIA.telefono WHERE idTelefono = @idTelefono";
-                    DBIDisposable dB = new DBIDisposable();
+                    DB dB = new DB();
 
                     res = dB.UpdateQuery(query, parameters);
 
