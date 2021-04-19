@@ -132,6 +132,7 @@ namespace ProyectpABD
             this.btPago.Text = "  Pago";
             this.btPago.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btPago.UseVisualStyleBackColor = true;
+            this.btPago.Click += new System.EventHandler(this.btPago_Click);
             // 
             // btTelefonos
             // 

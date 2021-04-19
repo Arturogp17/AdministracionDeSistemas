@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32.SafeHandles;
+using ProyectpABD.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,9 +9,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectpABD.Models
+namespace ProyectoABD.Models
 {
-    class DBIDisposable
+    class DB:IDisposable
     {
         //Pablo Rocha : "DESKTOP-TU3UADU"
         //Luis Cardona: "localhost\\SQLEXPRESS"
