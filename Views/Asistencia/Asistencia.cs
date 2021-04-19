@@ -40,7 +40,7 @@ namespace ProyectoABD.Views.Asistencia
             try
             {
 
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -84,7 +84,7 @@ namespace ProyectoABD.Views.Asistencia
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 SqlDataReader readerPer = dB.DoQuery(queryPer);
 
@@ -150,7 +150,7 @@ namespace ProyectoABD.Views.Asistencia
                         new DBParameter("@fecha", fechaInter)//Columna de Salida
                     };
                     string query = "DELETE FROM PAQUETERIA.asistencia WHERE horarioLlegada = @horarioLlegada AND fecha = @fecha";
-                    DBIDisposable dB = new DBIDisposable();
+                    DB dB = new DB();
 
                     res = dB.UpdateQuery(query, parameters);
 
@@ -207,8 +207,8 @@ namespace ProyectoABD.Views.Asistencia
             };
             try
             {
-                query = "INSERT INTO PAQUETERIA.asistencia (idPersonal,horarioLlegada) VALUES (@idPersonal, @HorarioLlegada)";               
-                DBIDisposable dB = new DBIDisposable();
+                query = "INSERT INTO PAQUETERIA.asistencia (idPersonal,horarioLlegada) VALUES (@idPersonal, @HorarioLlegada)";
+                DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
             }
@@ -242,7 +242,7 @@ namespace ProyectoABD.Views.Asistencia
                     try
                     {
                         query = "UPDATE PAQUETERIA.asistencia SET horarioLlegada = @HorarioLlegada, horarioSalida = @HorarioSalida  WHERE idPersonal = @idPersonal AND horarioSalida IS NULL";
-                        DBIDisposable dB = new DBIDisposable();
+                        DB dB = new DB();
 
                         res = dB.UpdateQuery(query, parameters);
                     }

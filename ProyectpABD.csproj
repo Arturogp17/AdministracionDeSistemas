@@ -53,12 +53,15 @@
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\cAsistencia.cs" />
+    <Compile Include="Models\cCamion.cs" />
     <Compile Include="Models\cHorarioPersonal.cs" />
     <Compile Include="Models\cPersonal.cs" />
     <Compile Include="Models\cTelefono.cs" />
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\DBParameter.cs" />
     <Compile Include="Models\cSucursal.cs" />
+    <Compile Include="Models\generic.cs" />
+    <Compile Include="Models\cPago.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Asistencia\Asistencia.cs">
@@ -102,6 +105,18 @@
     </Compile>
     <Compile Include="Views\HorarioPersonal\HorarioPersonal.Designer.cs">
       <DependentUpon>HorarioPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pago\frmPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pago\frmPago.Designer.cs">
+      <DependentUpon>frmPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pago\Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Pago\Pago.Designer.cs">
+      <DependentUpon>Pago.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Personal\frmPersonal.cs">
       <SubType>Form</SubType>
@@ -172,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\HorarioPersonal\HorarioPersonal.resx">
       <DependentUpon>HorarioPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pago\Pago.resx">
+      <DependentUpon>Pago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Personal\frmPersonal.resx">
       <DependentUpon>frmPersonal.cs</DependentUpon>

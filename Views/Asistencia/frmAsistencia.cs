@@ -40,7 +40,7 @@ namespace ProyectoABD.Views.Asistencia
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -133,7 +133,7 @@ namespace ProyectoABD.Views.Asistencia
                 {
                     query = "INSERT INTO PAQUETERIA.asistencia (idPersonal,horarioLlegada) VALUES (@idPersonal, @HorarioLlegada)";
                 }
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
 

@@ -62,7 +62,7 @@ namespace ProyectoABD.Views.Personal
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -161,7 +161,7 @@ namespace ProyectoABD.Views.Personal
                 {
                     query = "INSERT INTO PAQUETERIA.personal (nss,idSucursal,nombre,numeroCelular,edad,fechaNacimiento,direccion,email,tipoEmpleado,salario,cuenta) VALUES (@nss, @idSucursal,@nombre,@numeroCelular,@edad,@fechaNacimiento,@direccion,@email,@tipoEmpleado,@salario, @cuenta)";
                 }
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
 

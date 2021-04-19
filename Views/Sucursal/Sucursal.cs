@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoABD.Models;
 using ProyectpABD.Models;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace ProyectoABD.Views.Sucursal
@@ -28,7 +27,7 @@ namespace ProyectoABD.Views.Sucursal
             string query = @"SELECT * FROM PAQUETERIA.sucursal";
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -77,7 +76,7 @@ namespace ProyectoABD.Views.Sucursal
                         new DBParameter("@idSucursal", Convert.ToInt32(gridSucursales.SelectedRows[0].Cells[0].Value))
                     };
                     string query = "DELETE FROM PAQUETERIA.sucursal WHERE idSucursal = @idSucursal";
-                    DBIDisposable dB = new DBIDisposable();
+                    DB dB = new DB();
                     
                     res = dB.UpdateQuery(query, parameters);
                     

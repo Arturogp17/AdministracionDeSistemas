@@ -40,7 +40,7 @@ namespace ProyectoABD.Views.HorarioPersonal
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -138,7 +138,7 @@ namespace ProyectoABD.Views.HorarioPersonal
                 {
                     query = "INSERT INTO PAQUETERIA.horarioPersonal (idPersonal,Horas,Horario) VALUES (@idPersonal, @Horas,@Horario)";
                 }
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
 
