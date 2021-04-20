@@ -35,7 +35,7 @@ namespace ProyectoABD.Views.Ruta
                         INNER JOIN PAQUETERIA.camion ON PAQUETERIA.ruta.idCamion = PAQUETERIA.camion.idCamion ";
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -104,7 +104,7 @@ namespace ProyectoABD.Views.Ruta
                         new DBParameter("@idRuta", Convert.ToInt32(gridRutas.SelectedRows[0].Cells[0].Value))
                     };
                     string query = "DELETE FROM PAQUETERIA.ruta WHERE idRuta = @idRuta";
-                    DBIDisposable dB = new DBIDisposable();
+                    DB dB = new DB();
 
                     res = dB.UpdateQuery(query, parameters);
 
