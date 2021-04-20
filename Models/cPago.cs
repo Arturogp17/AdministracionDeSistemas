@@ -17,7 +17,9 @@ namespace ProyectoABD.Models
         public string NSS { get; set; }
         public double monto { get; set; }
         public double salario { get; set; }
-        public DateTime fecha { get; set; }
+        public int asistencias { get; set; }
+        public DateTime inicioPeriodo { get; set; }
+        public DateTime finPeriodo { get; set; }
 
     }
 }

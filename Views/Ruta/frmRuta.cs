@@ -47,7 +47,7 @@ namespace ProyectoABD.Views.Ruta
                 string query = @"SELECT * FROM PAQUETERIA.sucursal";
                 string queryc = @"SELECT * FROM PAQUETERIA.camion";
 
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -162,7 +162,7 @@ namespace ProyectoABD.Views.Ruta
                     query = "INSERT INTO PAQUETERIA.ruta (idCamion, horario,idSucursalOrigen,idSucursalDestino ) " +
                         "VALUES (@idCamion,@horario,@idSucursalOrigen,@idSucursalDestino)";
                 }
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
 

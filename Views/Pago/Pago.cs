@@ -24,6 +24,16 @@ namespace ProyectoABD.Views.Pago
         {   
             try
             {
+                if(DateTime.Now.Day > 15)
+                {
+                    dpInicio.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 16);
+                    dpFin.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+                }
+                else
+                {
+                    dpInicio.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+                    dpFin.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 15);
+                }
                 List<cSucursal> sucursales = new List<cSucursal>();
                 string query = @"SELECT * FROM PAQUETERIA.sucursal";
                 using (DB dB = new DB())
@@ -52,12 +62,18 @@ namespace ProyectoABD.Views.Pago
         {
             try
             {
-                string query = @"SELECT T0.idPersonal, T0.nombre, nss, cuenta, contadorAsistencia, T1.nombre, T0.salario FROM PAQUETERIA.personal T0
-                                JOIN PAQUETERIA.sucursal T1 ON T1.idSucursal = T0.idSucursal where T0.idSucursal = @idSucursal AND contadorAsistencia > 0";
+                string query = @"SELECT T0.idPersonal, T0.nombre, nss, cuenta, T1.nombre, T0.salario,
+                                        (select count(idPersonal) from PAQUETERIA.asistencia WHERE @inicioFecha <= fecha AND fecha <= @finFecha) contadorAsistencia
+                                        FROM PAQUETERIA.personal T0
+                                        JOIN PAQUETERIA.sucursal T1 ON T1.idSucursal = T0.idSucursal 
+                                        where T0.idSucursal = @idSucursal 
+                                        AND (SELECT COUNT(idPago) from PAQUETERIA.pago pago WHERE pago.idPersonal = T0.idPersonal AND fechaFinPeriodo =  @finFecha) = 0";
                 List<DBParameter> parameters = new List<DBParameter>
-            {
-                new DBParameter("@idSucursal", idSuc),
-            };
+                {
+                    new DBParameter("@idSucursal", idSuc),
+                    new DBParameter("@inicioFecha", dpInicio.Value),
+                    new DBParameter("@finFecha", dpFin.Value),
+                };
                 List<cPago> pagos = new List<cPago>();
                 using (DB dB = new DB())
                 {
@@ -112,7 +128,9 @@ namespace ProyectoABD.Views.Pago
                 p.idPersonal = Convert.ToInt32(gridPagos.Rows[i].Cells[0].Value);
                 p.idSucursal = Convert.ToInt32(ddlSucursal.SelectedValue);
                 p.monto = Convert.ToDouble(gridPagos.Rows[i].Cells[6].Value);
-                p.fecha = DateTime.Now;
+                p.asistencias = Convert.ToInt32(gridPagos.Rows[i].Cells[4].Value);
+                p.inicioPeriodo = dpInicio.Value;
+                p.finPeriodo = dpFin.Value;
                 GenerarPago(p);
             }
             RefreshGrid((int)ddlSucursal.SelectedValue);
@@ -122,19 +140,20 @@ namespace ProyectoABD.Views.Pago
         {
             try
             {
-                string query = @"INSERT INTO PAQUETERIA.pago VALUES (@idSucursal, @idPersonal, @monto, @fecha)";
+                string query = @"INSERT INTO PAQUETERIA.pago VALUES (@idSucursal, @idPersonal, @monto, @asistencias, @fechaInicio, @fechaFin)";
                 List<DBParameter> parameters = new List<DBParameter>
             {
                 new DBParameter("@idSucursal", pago.idSucursal),
                 new DBParameter("@idPersonal", pago.idPersonal),
                 new DBParameter("@monto", pago.monto),
-                new DBParameter("@fecha", pago.fecha)
+                new DBParameter("@asistencias", pago.asistencias),
+                new DBParameter("@fechaInicio", dpInicio.Value),
+                new DBParameter("@fechaFin", dpFin.Value),
+
             };
                 List<cPago> pagos = new List<cPago>();
                 using (DB dB = new DB())
                 {
-                    dB.UpdateQuery(query, parameters);
-                    query = "UPDATE PAQUETERIA.personal SET contadorAsistencia = 0 WHERE idPErsonal = @idPersonal";
                     dB.UpdateQuery(query, parameters);
                 }
             }
@@ -143,5 +162,6 @@ namespace ProyectoABD.Views.Pago
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

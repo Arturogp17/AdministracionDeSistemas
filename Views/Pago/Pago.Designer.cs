@@ -33,8 +33,6 @@ namespace ProyectoABD.Views.Pago
             this.lbSucursal = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gridPagos = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ddlSucursal = new System.Windows.Forms.ComboBox();
             this.idPersonal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +40,12 @@ namespace ProyectoABD.Views.Pago
             this.DiasTrabajados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PagoR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ddlSucursal = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dpInicio = new System.Windows.Forms.DateTimePicker();
+            this.dpFin = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelCamion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPagos)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +59,7 @@ namespace ProyectoABD.Views.Pago
             this.panelCamion.Location = new System.Drawing.Point(5, 13);
             this.panelCamion.Margin = new System.Windows.Forms.Padding(2);
             this.panelCamion.Name = "panelCamion";
-            this.panelCamion.Size = new System.Drawing.Size(790, 73);
+            this.panelCamion.Size = new System.Drawing.Size(979, 73);
             this.panelCamion.TabIndex = 13;
             // 
             // lbSucursal
@@ -110,29 +114,8 @@ namespace ProyectoABD.Views.Pago
             this.gridPagos.RowHeadersWidth = 51;
             this.gridPagos.RowTemplate.Height = 24;
             this.gridPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridPagos.Size = new System.Drawing.Size(776, 300);
+            this.gridPagos.Size = new System.Drawing.Size(965, 300);
             this.gridPagos.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(311, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Sucursal";
-            // 
-            // ddlSucursal
-            // 
-            this.ddlSucursal.DisplayMember = "idNombre";
-            this.ddlSucursal.FormattingEnabled = true;
-            this.ddlSucursal.Location = new System.Drawing.Point(396, 103);
-            this.ddlSucursal.Name = "ddlSucursal";
-            this.ddlSucursal.Size = new System.Drawing.Size(392, 21);
-            this.ddlSucursal.TabIndex = 16;
-            this.ddlSucursal.ValueMember = "idSucursal";
-            this.ddlSucursal.SelectedIndexChanged += new System.EventHandler(this.ddlSucursal_SelectedIndexChanged);
             // 
             // idPersonal
             // 
@@ -177,11 +160,74 @@ namespace ProyectoABD.Views.Pago
             this.PagoR.Name = "PagoR";
             this.PagoR.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(186, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Sucursal";
+            // 
+            // ddlSucursal
+            // 
+            this.ddlSucursal.DisplayMember = "idNombre";
+            this.ddlSucursal.FormattingEnabled = true;
+            this.ddlSucursal.Location = new System.Drawing.Point(271, 104);
+            this.ddlSucursal.Name = "ddlSucursal";
+            this.ddlSucursal.Size = new System.Drawing.Size(175, 21);
+            this.ddlSucursal.TabIndex = 16;
+            this.ddlSucursal.ValueMember = "idSucursal";
+            this.ddlSucursal.SelectedIndexChanged += new System.EventHandler(this.ddlSucursal_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(502, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Periodo de";
+            // 
+            // dpInicio
+            // 
+            this.dpInicio.Enabled = false;
+            this.dpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpInicio.Location = new System.Drawing.Point(603, 105);
+            this.dpInicio.Name = "dpInicio";
+            this.dpInicio.Size = new System.Drawing.Size(80, 20);
+            this.dpInicio.TabIndex = 18;
+            // 
+            // dpFin
+            // 
+            this.dpFin.Enabled = false;
+            this.dpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpFin.Location = new System.Drawing.Point(718, 105);
+            this.dpFin.Name = "dpFin";
+            this.dpFin.Size = new System.Drawing.Size(80, 20);
+            this.dpFin.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(689, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "al";
+            // 
             // Pago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(989, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dpFin);
+            this.Controls.Add(this.dpInicio);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ddlSucursal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelCamion);
@@ -213,5 +259,9 @@ namespace ProyectoABD.Views.Pago
         private System.Windows.Forms.DataGridViewTextBoxColumn DiasTrabajados;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salario;
         private System.Windows.Forms.DataGridViewTextBoxColumn PagoR;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dpInicio;
+        private System.Windows.Forms.DateTimePicker dpFin;
+        private System.Windows.Forms.Label label3;
     }
 }

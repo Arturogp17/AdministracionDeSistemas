@@ -15,7 +15,7 @@ namespace ProyectoABD.Models
     {
         //Pablo Rocha : "DESKTOP-TU3UADU"
         //Luis Cardona: "localhost\\SQLEXPRESS"
-        private string DB_SERVER = "DESKTOP-TU3UADU";
+        private string DB_SERVER = "ARTUROGARCA894D";
         private string DATABASE = "paqueteriaSLP";
         private SqlConnection sqlConnection = null;
         private SqlCommand sqlCommand = null;
