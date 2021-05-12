@@ -46,6 +46,7 @@ namespace ProyectoABD.Views.Pago
             this.dpInicio = new System.Windows.Forms.DateTimePicker();
             this.dpFin = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnShow = new System.Windows.Forms.Button();
             this.panelCamion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPagos)).BeginInit();
             this.SuspendLayout();
@@ -219,11 +220,28 @@ namespace ProyectoABD.Views.Pago
             this.label3.TabIndex = 20;
             this.label3.Text = "al";
             // 
+            // btnShow
+            // 
+            this.btnShow.BackColor = System.Drawing.Color.Gray;
+            this.btnShow.FlatAppearance.BorderSize = 0;
+            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShow.ForeColor = System.Drawing.Color.White;
+            this.btnShow.Location = new System.Drawing.Point(888, 97);
+            this.btnShow.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(96, 32);
+            this.btnShow.TabIndex = 21;
+            this.btnShow.Text = "Pagos";
+            this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
             // Pago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 450);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dpFin);
             this.Controls.Add(this.dpInicio);
@@ -263,5 +281,6 @@ namespace ProyectoABD.Views.Pago
         private System.Windows.Forms.DateTimePicker dpInicio;
         private System.Windows.Forms.DateTimePicker dpFin;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnShow;
     }
 }

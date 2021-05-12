@@ -203,11 +203,12 @@ namespace ProyectoABD.Views.Asistencia
             List<DBParameter> parameters = new List<DBParameter>
             {
                 new DBParameter("@idPersonal", pA.idPersonal.ToString()),
-                new DBParameter("@HorarioLlegada", DateTime.Now.ToString("hh:mm:ss")),                
+                new DBParameter("@HorarioLlegada", DateTime.Now.ToString("hh:mm:ss")),
+                new DBParameter("@fecha", DateTime.Now),
             };
             try
             {
-                query = "INSERT INTO PAQUETERIA.asistencia (idPersonal,horarioLlegada) VALUES (@idPersonal, @HorarioLlegada)";
+                query = "INSERT INTO PAQUETERIA.asistencia (idPersonal,horarioLlegada, fecha) VALUES (@idPersonal, @HorarioLlegada, @fecha)";
                 DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
