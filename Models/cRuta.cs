@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoABD.Models
 {
+
     class cRuta
     {
         public int idRuta { get; set; }
@@ -20,4 +21,8 @@ namespace ProyectoABD.Models
         public int anio { get; set; }
 
     }
+     public override string ToString()
+      {
+          return nombreRuta;
+      }
 }

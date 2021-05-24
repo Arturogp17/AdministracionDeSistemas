@@ -36,6 +36,8 @@ namespace ProyectoABD.Views.Personal
 
                 DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
+
+
                 while (reader.Read())
                 {
 

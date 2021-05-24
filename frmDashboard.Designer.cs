@@ -212,6 +212,7 @@ namespace ProyectpABD
             this.btAsignacion.Text = "  Asignación Ruta";
             this.btAsignacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btAsignacion.UseVisualStyleBackColor = true;
+            this.btAsignacion.Click += new System.EventHandler(this.BtAsignacion_Click);
             // 
             // btPersonal
             // 

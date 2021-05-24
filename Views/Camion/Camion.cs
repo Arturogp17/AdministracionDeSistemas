@@ -132,5 +132,10 @@ namespace ProyectoABD.Views.Camion
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void BtAñadirCamion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

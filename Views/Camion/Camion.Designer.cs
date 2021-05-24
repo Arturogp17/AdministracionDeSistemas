@@ -68,37 +68,37 @@ namespace ProyectoABD.Views.Camion
             this.lbSucursal.TabIndex = 3;
             this.lbSucursal.Text = "CAMIONES";
             // 
-            // btnDelete
+            // btEliminarCamion
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Gray;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(113, 98);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 32);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btEliminarCamion.BackColor = System.Drawing.Color.Gray;
+            this.btEliminarCamion.FlatAppearance.BorderSize = 0;
+            this.btEliminarCamion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEliminarCamion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEliminarCamion.ForeColor = System.Drawing.Color.White;
+            this.btEliminarCamion.Location = new System.Drawing.Point(113, 98);
+            this.btEliminarCamion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btEliminarCamion.Name = "btEliminarCamion";
+            this.btEliminarCamion.Size = new System.Drawing.Size(75, 32);
+            this.btEliminarCamion.TabIndex = 8;
+            this.btEliminarCamion.Text = "Eliminar";
+            this.btEliminarCamion.UseVisualStyleBackColor = false;
             // 
-            // btnAdd
+            // btAñadirCamion
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Gray;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(13, 98);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 32);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Añadir";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btAñadirCamion.BackColor = System.Drawing.Color.Gray;
+            this.btAñadirCamion.FlatAppearance.BorderSize = 0;
+            this.btAñadirCamion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAñadirCamion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAñadirCamion.ForeColor = System.Drawing.Color.White;
+            this.btAñadirCamion.Location = new System.Drawing.Point(13, 98);
+            this.btAñadirCamion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btAñadirCamion.Name = "btAñadirCamion";
+            this.btAñadirCamion.Size = new System.Drawing.Size(75, 32);
+            this.btAñadirCamion.TabIndex = 7;
+            this.btAñadirCamion.Text = "Añadir";
+            this.btAñadirCamion.UseVisualStyleBackColor = false;
+            this.btAñadirCamion.Click += new System.EventHandler(this.BtAñadirCamion_Click);
+
             // 
             // gridCamiones
             // 

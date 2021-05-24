@@ -58,7 +58,7 @@
             this.TBNombre.Location = new System.Drawing.Point(131, 128);
             this.TBNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBNombre.Name = "TBNombre";
-            this.TBNombre.Size = new System.Drawing.Size(160, 22);
+            this.TBNombre.Size = new System.Drawing.Size(121, 20);
             this.TBNombre.TabIndex = 0;
             // 
             // label1
@@ -85,19 +85,21 @@
             // 
             // TBNSS
             // 
+
             this.TBNSS.Location = new System.Drawing.Point(131, 170);
             this.TBNSS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBNSS.Name = "TBNSS";
-            this.TBNSS.Size = new System.Drawing.Size(160, 22);
+            this.TBNSS.Size = new System.Drawing.Size(121, 20);
             this.TBNSS.TabIndex = 2;
             // 
             // CBSucursal
             // 
             this.CBSucursal.FormattingEnabled = true;
+
             this.CBSucursal.Location = new System.Drawing.Point(131, 82);
             this.CBSucursal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBSucursal.Name = "CBSucursal";
-            this.CBSucursal.Size = new System.Drawing.Size(160, 24);
+            this.CBSucursal.Size = new System.Drawing.Size(121, 21);
             this.CBSucursal.TabIndex = 4;
             // 
             // label3
@@ -107,7 +109,7 @@
             this.label3.Location = new System.Drawing.Point(16, 90);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 18);
+            this.label3.Size = new System.Drawing.Size(58, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Sucursal:";
             // 
@@ -127,7 +129,7 @@
             this.TBNumCelular.Location = new System.Drawing.Point(131, 213);
             this.TBNumCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBNumCelular.Name = "TBNumCelular";
-            this.TBNumCelular.Size = new System.Drawing.Size(160, 22);
+            this.TBNumCelular.Size = new System.Drawing.Size(121, 20);
             this.TBNumCelular.TabIndex = 6;
             // 
             // label5
@@ -146,7 +148,7 @@
             this.textBox4.Location = new System.Drawing.Point(321, 90);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(0, 22);
+            this.textBox4.Size = new System.Drawing.Size(1, 20);
             this.textBox4.TabIndex = 8;
             // 
             // DTPFechaNacimiento
@@ -156,7 +158,7 @@
             this.DTPFechaNacimiento.Location = new System.Drawing.Point(175, 258);
             this.DTPFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DTPFechaNacimiento.Name = "DTPFechaNacimiento";
-            this.DTPFechaNacimiento.Size = new System.Drawing.Size(265, 22);
+            this.DTPFechaNacimiento.Size = new System.Drawing.Size(200, 20);
             this.DTPFechaNacimiento.TabIndex = 10;
             // 
             // label6
@@ -175,7 +177,7 @@
             this.TBDireccion.Location = new System.Drawing.Point(437, 81);
             this.TBDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBDireccion.Name = "TBDireccion";
-            this.TBDireccion.Size = new System.Drawing.Size(160, 22);
+            this.TBDireccion.Size = new System.Drawing.Size(121, 20);
             this.TBDireccion.TabIndex = 11;
             // 
             // label7
@@ -185,7 +187,7 @@
             this.label7.Location = new System.Drawing.Point(308, 128);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 18);
+            this.label7.Size = new System.Drawing.Size(42, 15);
             this.label7.TabIndex = 14;
             this.label7.Text = "Email:";
             // 
@@ -194,7 +196,7 @@
             this.TBEmail.Location = new System.Drawing.Point(437, 124);
             this.TBEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBEmail.Name = "TBEmail";
-            this.TBEmail.Size = new System.Drawing.Size(160, 22);
+            this.TBEmail.Size = new System.Drawing.Size(121, 20);
             this.TBEmail.TabIndex = 13;
             this.TBEmail.TextChanged += new System.EventHandler(this.TBEmail_TextChanged);
             // 
@@ -219,7 +221,7 @@
             this.CBTipoEmpleado.Location = new System.Drawing.Point(438, 168);
             this.CBTipoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBTipoEmpleado.Name = "CBTipoEmpleado";
-            this.CBTipoEmpleado.Size = new System.Drawing.Size(160, 24);
+            this.CBTipoEmpleado.Size = new System.Drawing.Size(121, 21);
             this.CBTipoEmpleado.TabIndex = 15;
             // 
             // btAñadirPersonal
@@ -252,12 +254,11 @@
             // lbPersonal
             // 
             this.lbPersonal.AutoSize = true;
-            this.lbPersonal.Font = new System.Drawing.Font("Raleway", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPersonal.ForeColor = System.Drawing.Color.White;
-            this.lbPersonal.Location = new System.Drawing.Point(21, 10);
-            this.lbPersonal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPersonal.Location = new System.Drawing.Point(16, 8);
             this.lbPersonal.Name = "lbPersonal";
-            this.lbPersonal.Size = new System.Drawing.Size(186, 29);
+            this.lbPersonal.Size = new System.Drawing.Size(144, 24);
             this.lbPersonal.TabIndex = 3;
             this.lbPersonal.Text = "Añadir Personal";
             // 
@@ -282,7 +283,7 @@
             // 
             // frmPersonal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 382);
             this.Controls.Add(this.label9);

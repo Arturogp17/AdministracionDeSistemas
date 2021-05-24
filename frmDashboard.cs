@@ -1,4 +1,5 @@
 ﻿using ProyectoABD.Properties;
+using ProyectoABD.Views.AsignacionDeRuta;
 using ProyectoABD.Views.Asistencia;
 using ProyectoABD.Views.Camion;
 using ProyectoABD.Views.Home;
@@ -118,6 +119,7 @@ namespace ProyectpABD
             fDashboard.FormBorderStyle = FormBorderStyle.None;
             fDashboard.Dock = DockStyle.Fill;
             fDashboard.Show();
+
         }
 
         private void btInicio_Click(object sender, EventArgs e)
@@ -164,11 +166,24 @@ namespace ProyectpABD
             fDashboard.Show();
         }
 
+        private void BtAsignacion_Click(object sender, EventArgs e)
+        {
+            pnlContainer.Controls.Clear();  //Limpia el contenedo
+            RutasAsignadas fDashboard = new RutasAsignadas(); //Crea la nueva forma a asignar
+            fDashboard.Name = "frmRutasAsignadas";
+            fDashboard.TopLevel = false;
+            fDashboard.AutoScroll = true;
+            pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
+            fDashboard.FormBorderStyle = FormBorderStyle.None;
+            fDashboard.Dock = DockStyle.Fill;
+            fDashboard.Show();
+        }
+
         private void btRutas_Click(object sender, EventArgs e)
         {
             pnlContainer.Controls.Clear();  //Limpia el contenedo
             Ruta fDashboard = new Ruta(); //Crea la nueva forma a asignar
-              fDashboard.Name = "frmAdmin";
+            fDashboard.Name = "frmAdmin";
             fDashboard.TopLevel = false;
             fDashboard.AutoScroll = true;
             pnlContainer.Controls.Add(fDashboard); //Agrega la forma al panel
