@@ -26,9 +26,10 @@ namespace ProyectoABD.Views.Personal
         private string email;
         private string tipoEmpleado;
         private double salario;
+        private string cuentaBanca;
         List<cSucursal> sucursales;       
 
-        public frmPersonal(double idP = 0, double numero_ss = 0, double idS = 0, string nom = "", string numCel = "", int ed = 0, string fechNaci = "", string dire = "", string em = "", string tiEmpleado = "", double sal = 0)
+        public frmPersonal(double idP = 0, double numero_ss = 0, double idS = 0, string nom = "", string numCel = "", int ed = 0, string fechNaci = "", string dire = "", string em = "", string tiEmpleado = "", double sal = 0, string cueBan="")
         {
             InitializeComponent();
 
@@ -42,7 +43,8 @@ namespace ProyectoABD.Views.Personal
             direccion = dire;
             email = em;
             tipoEmpleado = tiEmpleado;
-            salario = sal;           
+            salario = sal;
+            cuentaBanca = cueBan;
         }
 
 
@@ -57,7 +59,7 @@ namespace ProyectoABD.Views.Personal
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -75,6 +77,7 @@ namespace ProyectoABD.Views.Personal
                     p.email = Convert.ToString(reader["email"]);
                     p.tipoEmpleado = Convert.ToString(reader["tipoEmpleado"]);
                     p.salario = Convert.ToInt32(reader["salario"]);
+                    p.cuentaBancaria = Convert.ToString(reader["cuenta"]);
 
                     LisPersonal.Add(p);
 
@@ -108,6 +111,7 @@ namespace ProyectoABD.Views.Personal
                     TBDireccion.Text = direccion;
                     TBEmail.Text = email;
                     CBTipoEmpleado.Text = tipoEmpleado;
+                    TBCuenta.Text = cuentaBanca;
                     lbPersonal.Text = "Modifica Personal";
 
                 }
@@ -139,7 +143,8 @@ namespace ProyectoABD.Views.Personal
                 new DBParameter("@direccion", TBDireccion.Text),
                 new DBParameter("@email", TBEmail.Text),
                 new DBParameter("@tipoEmpleado", CBTipoEmpleado.Text),
-                new DBParameter("@salario", "2000")//Corregir Salario                 
+                new DBParameter("@salario", "2000"),//Corregir Salario                 
+                new DBParameter("@cuenta", TBCuenta.Text)
 
             };
             try
@@ -147,13 +152,13 @@ namespace ProyectoABD.Views.Personal
                 if (idSucursal > 0)
                 {
                     parameters.Add(new DBParameter("@idPersonalMod", idPersonal));
-                    query = "UPDATE PAQUETERIA.personal SET nss = @nss, idSucursal = @idSucursal, nombre = @nombre, numeroCelular = @numeroCelular, edad = @edad, fechaNacimiento = @fechaNacimiento, direccion = @direccion, email = @email, tipoEmpleado = @tipoEmpleado, salario  = @salario  WHERE idPersonal = @idPersonalMod";
+                    query = "UPDATE PAQUETERIA.personal SET nss = @nss, idSucursal = @idSucursal, nombre = @nombre, numeroCelular = @numeroCelular, edad = @edad, direccion = @direccion, email = @email, tipoEmpleado = @tipoEmpleado, cuenta = @cuenta  WHERE idPersonal = @idPersonalMod";
                 }
                 else
                 {
-                    query = "INSERT INTO PAQUETERIA.personal (nss,idSucursal,nombre,numeroCelular,edad,fechaNacimiento,direccion,email,tipoEmpleado,salario) VALUES (@nss, @idSucursal,@nombre,@numeroCelular,@edad,@fechaNacimiento,@direccion,@email,@tipoEmpleado,@salario)";
+                    query = "INSERT INTO PAQUETERIA.personal (nss,idSucursal,nombre,numeroCelular,edad,fechaNacimiento,direccion,email,tipoEmpleado,salario,cuenta) VALUES (@nss, @idSucursal,@nombre,@numeroCelular,@edad,@fechaNacimiento,@direccion,@email,@tipoEmpleado,@salario, @cuenta)";
                 }
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
 

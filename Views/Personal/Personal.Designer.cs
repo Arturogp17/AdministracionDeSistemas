@@ -30,9 +30,11 @@
         {
             this.DGVPersonal = new System.Windows.Forms.DataGridView();
             this.idPersonal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CuentaBancaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nss = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +56,11 @@
             this.DGVPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVPersonal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPersonal,
+            this.nombre,
+            this.CuentaBancaria,
+            this.Asistencias,
             this.nss,
             this.idSucursal,
-            this.nombre,
             this.numeroCelular,
             this.edad,
             this.fechaNacimiento,
@@ -65,10 +69,10 @@
             this.tipoEmpleado,
             this.Salario});
             this.DGVPersonal.Location = new System.Drawing.Point(16, 171);
-            this.DGVPersonal.Margin = new System.Windows.Forms.Padding(4);
+            this.DGVPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGVPersonal.Name = "DGVPersonal";
             this.DGVPersonal.RowHeadersWidth = 51;
-            this.DGVPersonal.Size = new System.Drawing.Size(1277, 368);
+            this.DGVPersonal.Size = new System.Drawing.Size(1584, 368);
             this.DGVPersonal.TabIndex = 0;
             this.DGVPersonal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPersonal_CellDoubleClick);
             // 
@@ -78,6 +82,25 @@
             this.idPersonal.MinimumWidth = 6;
             this.idPersonal.Name = "idPersonal";
             this.idPersonal.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // CuentaBancaria
+            // 
+            this.CuentaBancaria.HeaderText = "cuentaBancaria";
+            this.CuentaBancaria.MinimumWidth = 6;
+            this.CuentaBancaria.Name = "CuentaBancaria";
+            // 
+            // Asistencias
+            // 
+            this.Asistencias.HeaderText = "asistencias";
+            this.Asistencias.MinimumWidth = 6;
+            this.Asistencias.Name = "Asistencias";
             // 
             // nss
             // 
@@ -92,13 +115,6 @@
             this.idSucursal.MinimumWidth = 6;
             this.idSucursal.Name = "idSucursal";
             this.idSucursal.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
             // 
             // numeroCelular
             // 
@@ -154,12 +170,12 @@
             this.btn_FormAñadir.BackColor = System.Drawing.Color.Gray;
             this.btn_FormAñadir.FlatAppearance.BorderSize = 0;
             this.btn_FormAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_FormAñadir.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_FormAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_FormAñadir.ForeColor = System.Drawing.Color.White;
             this.btn_FormAñadir.Location = new System.Drawing.Point(16, 121);
-            this.btn_FormAñadir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_FormAñadir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_FormAñadir.Name = "btn_FormAñadir";
-            this.btn_FormAñadir.Size = new System.Drawing.Size(100, 40);
+            this.btn_FormAñadir.Size = new System.Drawing.Size(100, 39);
             this.btn_FormAñadir.TabIndex = 1;
             this.btn_FormAñadir.Text = "Añadir";
             this.btn_FormAñadir.UseVisualStyleBackColor = false;
@@ -170,12 +186,12 @@
             this.btn_Eliminar.BackColor = System.Drawing.Color.Gray;
             this.btn_Eliminar.FlatAppearance.BorderSize = 0;
             this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Eliminar.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.btn_Eliminar.Location = new System.Drawing.Point(150, 121);
-            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Eliminar.Location = new System.Drawing.Point(149, 121);
+            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(100, 40);
+            this.btn_Eliminar.Size = new System.Drawing.Size(100, 39);
             this.btn_Eliminar.TabIndex = 2;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = false;
@@ -198,6 +214,7 @@
             this.panelPersonal.BackColor = System.Drawing.Color.DarkCyan;
             this.panelPersonal.Controls.Add(this.lbPersonal);
             this.panelPersonal.Location = new System.Drawing.Point(0, 16);
+            this.panelPersonal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelPersonal.Name = "panelPersonal";
             this.panelPersonal.Size = new System.Drawing.Size(1000, 90);
             this.panelPersonal.TabIndex = 4;
@@ -206,12 +223,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1309, 554);
+            this.ClientSize = new System.Drawing.Size(1616, 554);
             this.Controls.Add(this.panelPersonal);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_FormAñadir);
             this.Controls.Add(this.DGVPersonal);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Personal";
             this.Text = "Personal";
             this.Load += new System.EventHandler(this.Personal_Load);
@@ -225,10 +242,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DGVPersonal;
+        private System.Windows.Forms.Button btn_FormAñadir;
+        private System.Windows.Forms.Button btn_Eliminar;
+        private System.Windows.Forms.Label lbPersonal;
+        private System.Windows.Forms.Panel panelPersonal;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPersonal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CuentaBancaria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn nss;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSucursal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroCelular;
         private System.Windows.Forms.DataGridViewTextBoxColumn edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimiento;
@@ -236,9 +259,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salario;
-        private System.Windows.Forms.Button btn_FormAñadir;
-        private System.Windows.Forms.Button btn_Eliminar;
-        private System.Windows.Forms.Label lbPersonal;
-        private System.Windows.Forms.Panel panelPersonal;
     }
 }

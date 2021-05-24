@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProyectoABD.Models
 {
-    class cHorarioPersonal
+    class generic
     {
-        public double idPersonal;
-        public string Horas;
-        public string NombrePersonal;
-        public string Horario;
-
-
+        public int value { get; set; }
+        public int name { get; set; }
     }
 }

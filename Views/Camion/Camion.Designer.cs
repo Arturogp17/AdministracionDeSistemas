@@ -31,21 +31,30 @@ namespace ProyectoABD.Views.Camion
         {
             this.panelCamion = new System.Windows.Forms.Panel();
             this.lbSucursal = new System.Windows.Forms.Label();
-            this.btEliminarCamion = new System.Windows.Forms.Button();
-            this.btAñadirCamion = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.gridCamiones = new System.Windows.Forms.DataGridView();
+            this.idCamion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCamion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCamiones)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCamion
             // 
+            this.panelCamion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCamion.BackColor = System.Drawing.Color.DarkCyan;
             this.panelCamion.Controls.Add(this.lbSucursal);
             this.panelCamion.Location = new System.Drawing.Point(-1, 14);
-            this.panelCamion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCamion.Margin = new System.Windows.Forms.Padding(2);
             this.panelCamion.Name = "panelCamion";
-            this.panelCamion.Size = new System.Drawing.Size(750, 73);
+            this.panelCamion.Size = new System.Drawing.Size(790, 73);
             this.panelCamion.TabIndex = 9;
             // 
             // lbSucursal
@@ -89,17 +98,79 @@ namespace ProyectoABD.Views.Camion
             this.btAñadirCamion.Text = "Añadir";
             this.btAñadirCamion.UseVisualStyleBackColor = false;
             this.btAñadirCamion.Click += new System.EventHandler(this.BtAñadirCamion_Click);
+
             // 
             // gridCamiones
             // 
+            this.gridCamiones.AllowUserToAddRows = false;
+            this.gridCamiones.AllowUserToDeleteRows = false;
+            this.gridCamiones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridCamiones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridCamiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridCamiones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCamion,
+            this.Placa,
+            this.Sucursal,
+            this.Marca,
+            this.Modelo,
+            this.Año,
+            this.Estado});
             this.gridCamiones.Location = new System.Drawing.Point(13, 139);
-            this.gridCamiones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridCamiones.Margin = new System.Windows.Forms.Padding(2);
+            this.gridCamiones.MultiSelect = false;
             this.gridCamiones.Name = "gridCamiones";
+            this.gridCamiones.ReadOnly = true;
             this.gridCamiones.RowHeadersWidth = 51;
             this.gridCamiones.RowTemplate.Height = 24;
-            this.gridCamiones.Size = new System.Drawing.Size(615, 184);
+            this.gridCamiones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridCamiones.Size = new System.Drawing.Size(776, 300);
             this.gridCamiones.TabIndex = 6;
+            this.gridCamiones.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCamiones_CellDoubleClick);
+            // 
+            // idCamion
+            // 
+            this.idCamion.HeaderText = "idCamion";
+            this.idCamion.Name = "idCamion";
+            this.idCamion.ReadOnly = true;
+            this.idCamion.Visible = false;
+            // 
+            // Placa
+            // 
+            this.Placa.HeaderText = "Placa";
+            this.Placa.Name = "Placa";
+            this.Placa.ReadOnly = true;
+            // 
+            // Sucursal
+            // 
+            this.Sucursal.HeaderText = "Sucursal";
+            this.Sucursal.Name = "Sucursal";
+            this.Sucursal.ReadOnly = true;
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
+            // 
+            // Modelo
+            // 
+            this.Modelo.HeaderText = "Modelo";
+            this.Modelo.Name = "Modelo";
+            this.Modelo.ReadOnly = true;
+            // 
+            // Año
+            // 
+            this.Año.HeaderText = "Año";
+            this.Año.Name = "Año";
+            this.Año.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // Camion
             // 
@@ -107,11 +178,12 @@ namespace ProyectoABD.Views.Camion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelCamion);
-            this.Controls.Add(this.btEliminarCamion);
-            this.Controls.Add(this.btAñadirCamion);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.gridCamiones);
             this.Name = "Camion";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Camion_Load);
             this.panelCamion.ResumeLayout(false);
             this.panelCamion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCamiones)).EndInit();
@@ -123,8 +195,15 @@ namespace ProyectoABD.Views.Camion
 
         private System.Windows.Forms.Panel panelCamion;
         private System.Windows.Forms.Label lbSucursal;
-        private System.Windows.Forms.Button btEliminarCamion;
-        private System.Windows.Forms.Button btAñadirCamion;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView gridCamiones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCamion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Placa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sucursal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Año;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

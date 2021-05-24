@@ -47,6 +47,7 @@
             this.lbSucursal.Size = new System.Drawing.Size(67, 18);
             this.lbSucursal.TabIndex = 0;
             this.lbSucursal.Text = "Sucursal";
+            this.lbSucursal.Click += new System.EventHandler(this.lbSucursal_Click);
             // 
             // lbTelefono
             // 
@@ -57,6 +58,7 @@
             this.lbTelefono.Size = new System.Drawing.Size(69, 18);
             this.lbTelefono.TabIndex = 1;
             this.lbTelefono.Text = "Teléfono";
+            this.lbTelefono.Click += new System.EventHandler(this.lbTelefono_Click);
             // 
             // cbSucursales
             // 
@@ -67,6 +69,7 @@
             this.cbSucursales.Size = new System.Drawing.Size(268, 24);
             this.cbSucursales.TabIndex = 2;
             this.cbSucursales.ValueMember = "idSucursal";
+            this.cbSucursales.SelectedIndexChanged += new System.EventHandler(this.cbSucursales_SelectedIndexChanged);
             // 
             // tbNumTelefono
             // 
@@ -74,6 +77,7 @@
             this.tbNumTelefono.Name = "tbNumTelefono";
             this.tbNumTelefono.Size = new System.Drawing.Size(268, 22);
             this.tbNumTelefono.TabIndex = 3;
+            this.tbNumTelefono.TextChanged += new System.EventHandler(this.tbNumTelefono_TextChanged);
             // 
             // btAñadirTelefono
             // 
@@ -98,6 +102,7 @@
             this.panelCamion.Name = "panelCamion";
             this.panelCamion.Size = new System.Drawing.Size(395, 48);
             this.panelCamion.TabIndex = 12;
+            this.panelCamion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCamion_Paint);
             // 
             // lbAddTel
             // 

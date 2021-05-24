@@ -33,7 +33,7 @@ namespace ProyectoABD.Views.Telefono
                 List<cSucursal> sucursales = new List<cSucursal>();
                 string query = @"SELECT * FROM PAQUETERIA.sucursal";
 
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
                 while (reader.Read())
                 {
@@ -81,7 +81,7 @@ namespace ProyectoABD.Views.Telefono
                 {
                     query = "INSERT INTO PAQUETERIA.telefono (idSucursal, telefono) VALUES (@idSucursal, @telefono)";
                 }
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
 
                 res = dB.UpdateQuery(query, parameters);
 
@@ -95,6 +95,31 @@ namespace ProyectoABD.Views.Telefono
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void lbSucursal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelCamion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbSucursales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNumTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTelefono_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
