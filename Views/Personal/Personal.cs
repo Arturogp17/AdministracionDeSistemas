@@ -52,7 +52,6 @@ namespace ProyectoABD.Views.Personal
                     p.email = Convert.ToString(reader["email"]);
                     p.tipoEmpleado = Convert.ToString(reader["tipoEmpleado"]);
                     p.salario = Convert.ToInt32(reader["salario"]);
-                    p.contadorAsistencias = Convert.ToInt32(reader["contadorAsistencia"]);
                     p.cuentaBancaria = Convert.ToString(reader["cuenta"]);
 
                     LisPersonal.Add(p);
