@@ -81,7 +81,7 @@ namespace ProyectoABD.Views.AsignacionDeRuta
 
             string query = @"INSERT INTO PAQUETERIA.asignacionDeRutas(idRuta, idPersonal, fechaInicio, fechaFin)
                              VALUES(@idRuta, @idPersonal, @fechaInicio, @fechaFin)";
-            DBIDisposable dB = new DBIDisposable();
+            DB dB = new DB();
             int res = dB.UpdateQuery(query, parameters);
             if(res <= 0)
             {
@@ -105,7 +105,7 @@ namespace ProyectoABD.Views.AsignacionDeRuta
             };
 
             string query = @"UPDATE PAQUETERIA.asignacionDeRutas SET idRuta = @idRuta, idPersonal = @idPersonal, fechaInicio = @fechaInicio, fechaFin = @fechaFin WHERE idAsignacionRuta = @idAsignacionRuta";
-            DBIDisposable dB = new DBIDisposable();
+            DB dB = new DB();
             int res = dB.UpdateQuery(query, parameters);
             if (res <= 0)
             {
@@ -191,7 +191,7 @@ namespace ProyectoABD.Views.AsignacionDeRuta
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
 
                 while (reader.Read())
@@ -234,7 +234,7 @@ namespace ProyectoABD.Views.AsignacionDeRuta
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
 
                 while (reader.Read())

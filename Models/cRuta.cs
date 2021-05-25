@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ProyectoABD.Models
 {
 
-    class cRuta
+    public class cRuta
     {
         public int idRuta { get; set; }
         public int idCamion { get; set; }
@@ -20,9 +20,12 @@ namespace ProyectoABD.Models
         public String marca { get; set; }
         public int anio { get; set; }
 
+        public string nombreRuta;
+        public override string ToString()
+        {
+            return nombreRuta;
+        }
+
     }
-     public override string ToString()
-      {
-          return nombreRuta;
-      }
+    
 }

@@ -81,7 +81,7 @@ namespace ProyectoABD.Views.AsignacionDeRuta
 
             try
             {
-                DBIDisposable dB = new DBIDisposable();
+                DB dB = new DB();
                 SqlDataReader reader = dB.DoQuery(query);
 
                 while (reader.Read())
@@ -129,7 +129,7 @@ namespace ProyectoABD.Views.AsignacionDeRuta
             };
 
             string query = @"DELETE PAQUETERIA.asignacionDeRutas WHERE idAsignacionRuta = @idAsignacionRuta";
-            DBIDisposable dB = new DBIDisposable();
+            DB dB = new DB();
             int res = dB.UpdateQuery(query, parameters);
             if (res <= 0)
             {

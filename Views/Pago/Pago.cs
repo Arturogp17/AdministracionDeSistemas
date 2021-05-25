@@ -141,6 +141,8 @@ namespace ProyectoABD.Views.Pago
             try
             {
                 string query = @"INSERT INTO PAQUETERIA.pago VALUES (@idSucursal, @idPersonal, @monto, @asistencias, @fechaInicio, @fechaFin)";
+                string fi = dpInicio.Value.ToString("MM/dd/yyyy");
+                string ff = dpFin.Value.ToString("MM/dd/yyyy");
                 List<DBParameter> parameters = new List<DBParameter>
             {
                 new DBParameter("@idSucursal", pago.idSucursal),
