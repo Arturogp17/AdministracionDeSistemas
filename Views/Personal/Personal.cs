@@ -61,7 +61,7 @@ namespace ProyectoABD.Views.Personal
                 }
                 foreach (var item in LisPersonal)
                 {
-                    string[] row = new string[] { item.idPersonal.ToString(), item.nombre, item.cuentaBancaria.ToString(), item.contadorAsistencias.ToString(), item.nss.ToString(), item.idSucursal.ToString(),  item.numeroCelular, item.edad.ToString(), item.fechaNacimiento, item.direccion, item.email, item.tipoEmpleado, item.salario.ToString() };
+                    string[] row = new string[] { item.idPersonal.ToString(), item.nombre, item.cuentaBancaria.ToString(), item.nss.ToString(), item.idSucursal.ToString(),  item.numeroCelular, item.edad.ToString(), item.fechaNacimiento, item.direccion, item.email, item.tipoEmpleado, item.salario.ToString() };
                     DGVPersonal.Rows.Add(row);
                 }
             }

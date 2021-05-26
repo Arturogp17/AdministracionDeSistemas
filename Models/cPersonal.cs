@@ -20,7 +20,6 @@ namespace ProyectoABD.Models
         public string tipoEmpleado;
         public double salario;
         public string cuentaBancaria;
-        public int contadorAsistencias;
             
 
         public override string ToString()

@@ -176,7 +176,7 @@ namespace ProyectoABD.Views.Asistencia
 
         private void DGVAsistencia_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            double idPersonal = Convert.ToInt32(DGVAsistencia.Rows[e.RowIndex].Cells["Id_Personal"].Value);
+            /*double idPersonal = Convert.ToInt32(DGVAsistencia.Rows[e.RowIndex].Cells["Id_Personal"].Value);
             string HorarioLlegada = Convert.ToString(DGVAsistencia.Rows[e.RowIndex].Cells["HorarioLlegada"].Value);
             string HorarioSalida = Convert.ToString(DGVAsistencia.Rows[e.RowIndex].Cells["HorarioSalida"].Value);
 
@@ -186,7 +186,7 @@ namespace ProyectoABD.Views.Asistencia
             if (fp.ShowDialog() == DialogResult.OK)
             {
                 FillGrid();
-            }
+            }*/
         }
 
         private void BTLlegada_Click(object sender, EventArgs e)
