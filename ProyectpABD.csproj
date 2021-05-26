@@ -221,6 +221,9 @@
     <EmbeddedResource Include="Views\HorarioPersonal\HorarioPersonal.resx">
       <DependentUpon>HorarioPersonal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pago\frmPago.resx">
+      <DependentUpon>frmPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Pago\Pago.resx">
       <DependentUpon>Pago.cs</DependentUpon>
     </EmbeddedResource>

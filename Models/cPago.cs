@@ -8,6 +8,7 @@ namespace ProyectoABD.Models
 {
     class cPago
     {
+        public int idPago { get; set; }
         public int idPersonal { get; set; }
         public int idSucursal { get; set; }
         public string nombre { get; set; }

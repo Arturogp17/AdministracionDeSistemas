@@ -67,12 +67,13 @@ namespace ProyectoABD.Views.Pago
                                         FROM PAQUETERIA.personal T0
                                         JOIN PAQUETERIA.sucursal T1 ON T1.idSucursal = T0.idSucursal 
                                         where T0.idSucursal = @idSucursal 
-                                        AND (SELECT COUNT(idPago) from PAQUETERIA.pago pago WHERE pago.idPersonal = T0.idPersonal AND fechaFinPeriodo =  @finFecha) = 0";
+                                        AND (SELECT COUNT(idPago) from PAQUETERIA.pago pago WHERE pago.idPersonal = T0.idPersonal AND fechaFinPeriodo =  @finFecha) = 0
+                                        AND (select count(idPersonal) from PAQUETERIA.asistencia WHERE @inicioFecha <= fecha AND fecha <= @finFecha) > 0";
                 List<DBParameter> parameters = new List<DBParameter>
                 {
                     new DBParameter("@idSucursal", idSuc),
                     new DBParameter("@inicioFecha", dpInicio.Value),
-                    new DBParameter("@finFecha", dpFin.Value),
+                    new DBParameter("@finFecha", dpFin.Value.Date),
                 };
                 List<cPago> pagos = new List<cPago>();
                 using (DB dB = new DB())
@@ -165,5 +166,10 @@ namespace ProyectoABD.Views.Pago
             }
         }
 
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            frmPago fp = new frmPago();
+            fp.Show();
+        }
     }
 }
